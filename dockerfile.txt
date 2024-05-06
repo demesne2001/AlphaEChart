@@ -1,0 +1,11 @@
+From node:18.12.1
+RUN mkdir '/alphaechart'
+WORKDIR '/alphaechart'
+
+COPY . /alphaechart
+COPY package.json .
+RUN npm install
+COPY . .
+
+EXPOSE 52202
+CMD [ "npm", "start" ]
