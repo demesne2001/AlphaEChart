@@ -8,8 +8,8 @@ function App() {
   return (
     <>
       <TestComp />
-      {/* <ExtraCharts />
-      <Mapp /> */}
+      <ExtraCharts />
+      <Mapp />
     </>
   );
 }
