@@ -42,23 +42,7 @@ function TestComp() {
         ['Walnut Brownie', 72.4, 53.9, 39.1]
     ]
 
-    const datapie = [
-        { value: 1548, name: 'Search Engine' },
-        { value: 775, name: 'Direct' },
-        { value: 679, name: 'Marketing', selected: true }
-    ]
 
-
-    const datasetpie = [
-        { value: 1048, name: 'Baidu' },
-        { value: 335, name: 'Direct' },
-        { value: 310, name: 'Email' },
-        { value: 200, name: 'Google' },
-        { value: 234, name: 'Union Ads' },
-        { value: 147, name: 'Bing' },
-        { value: 135, name: 'Video Ads' },
-        { value: 102, name: 'Others' }
-    ]
 
 
     let optiondata = {
@@ -188,15 +172,6 @@ function TestComp() {
             color: 'white',
             fontWeight: 'bold',
         },
-    }
-
-    let optradialPie = {
-        charttype: 'radialpie',
-        height: '500px',
-        width: '800px',
-        chartId: '10',
-        propdata: datapie,
-        dataset: datasetpie
     }
 
     let sun = {
@@ -523,6 +498,7 @@ function TestComp() {
         width: '100%',
         charttype: 'SymbolBar',
         chartId: '66',
+        Yaxis: ['reindeer', 'plane', 'train', 'ship', 'car'],
         pathsymbol: pathSymbols,
         symbolSize: ['80%', '60%'],
         bar1: [

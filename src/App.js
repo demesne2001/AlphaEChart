@@ -1,15 +1,15 @@
 import './App.css';
 import ExtraCharts from './components/ExtraCharts';
-// import Main from './components/MainComp';
+import Mapp from './components/Mapp';
 import TestComp from './components/TestComp';
 
 function App() {
   
   return (
     <>
-    {/* <Main /> */}
       <TestComp />
-      <ExtraCharts />
+      {/* <ExtraCharts />
+      <Mapp /> */}
     </>
   );
 }
