@@ -498,7 +498,6 @@ function TestComp() {
         width: '100%',
         charttype: 'SymbolBar',
         chartId: '66',
-        Yaxis: ['reindeer', 'plane', 'train', 'ship', 'car'],
         pathsymbol: pathSymbols,
         symbolSize: ['80%', '60%'],
         bar1: [
