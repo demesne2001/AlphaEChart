@@ -29,7 +29,7 @@ pipeline {
         stage('Docker Run') {
             steps {
                 script{
-                    bat 'docker run -p 52202:52202 -d --name alphaechart alphaechart'
+                    bat 'docker run -p 5000:5000 -d --name alphaechart alphaechart'
                 }
                 echo 'Docker Running'
             }
