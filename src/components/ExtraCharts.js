@@ -1706,39 +1706,59 @@ function ExtraCharts() {
     }
     
 
+    let chartradialopt = {
+        charttype: 'antv-radialbar',
+        series: [
+            { name: 'X6', star: 297 },
+            { name: 'G', star: 506 },
+            { name: 'AVA', star: 805 },
+            { name: 'G2Plot', star: 1478 },
+            { name: 'L7', star: 2029 },
+            { name: 'G6', star: 7100 },
+            { name: 'F2', star: 7346 },
+            { name: 'G2', star: 10178 },
+        ],
+    }
+
+
+    let twoPie = {
+        charttype: 'multiple-pie',
+        propdata1: [
+            { value: 751, name: 'Search Engine' },
+            { value: 572, name: 'Direct' },
+            { value: 757, name: 'Email' },
+            { value: 275, name: 'Union Ads' },
+            { value: 222, name: 'Video Ads' }
+        ],
+        propdata2: [
+            { value: 244, name: 'Search Engine' },
+            { value: 752, name: 'Direct' },
+            { value: 101, name: 'Email' },
+            { value: 75, name: 'Union Ads' },
+            { value: 522, name: 'Video Ads' }
+        ],
+        propdata3: [
+            { value: 105, name: 'Search Engine' },
+            { value: 740, name: 'Direct' },
+            { value: 102, name: 'Email' },
+            { value: 484, name: 'Union Ads' },
+            { value: 300, name: 'Video Ads' }
+        ],
+        height: '80%',
+        width: '100%',
+        chartId: 'two-pie'
+    }
+
+
+
+
+
 
     return (
         <>
             {/* <AlphaDashChart obj={option_pulserate} /> */}
             {/* <AlphaDashChart obj={option_twoline} />
         <AlphaDashChart obj={Xaxis_pointer} /> */}
-
-            {/* <AlphaDashChart obj={polaravg} />
-            <AlphaDashChart obj={polarstackedavg} />
-            <AlphaDashChart obj={optionpie} />
-            <AlphaDashChart obj={optionmultiarealine} />
-            <AlphaDashChart obj={option_twoline_minmax} />
-            <AlphaDashChart obj={option_updown_area} />
-            <AlphaDashChart obj={dashline} />
-            <AlphaDashChart obj={line_pie} />
-            <AlphaDashChart obj={Halfpolar} />
-            <AlphaDashChart obj={polar} />
-            <AlphaDashChart obj={waterfall} />
-            <AlphaDashChart obj={largearea} />
-            <AlphaDashChart obj={funnel} />
-            <AlphaDashChart obj={guage} />
-            <AlphaDashChart obj={cartesian} />
-            <AlphaDashChart obj={fourbar} />
-            <AlphaDashChart obj={stackedarea} />
-            <AlphaDashChart obj={ml_bar} />
-            <AlphaDashChart obj={radOpt} />
-            <AlphaDashChart obj={avataropt} />
-            <AlphaDashChart obj={image_avt} />
-            <AlphaDashChart obj={polaravg} />
-            <AlphaDashChart obj={polarstackedavg} />
-            <AlphaDashChart obj={optionpie} />
-            <AlphaDashChart obj={gradientbar} />
-            <AlphaDashChart obj={pick_bar} /> */}
 
 
 
@@ -2000,7 +2020,7 @@ function ExtraCharts() {
             <div className="row">
                 <div className="col-lg-4">
                     <div className="donut">
-                        <h4>stackes_bar_polar</h4>
+                        <h4>heatmap-yearwise</h4>
                         <AlphaDashChart obj={heatmap_year} />
                     </div>
                 </div>
@@ -2012,8 +2032,31 @@ function ExtraCharts() {
                 </div>
                 <div className="col-lg-4">
                     <div className="donut">
-                        <h4>heatmap</h4>
-                        {/* <AlphaDashChart obj={heatmap} /> */}
+                        <h4>antv-radialbar</h4>
+                        <AlphaDashChart obj={chartradialopt} />
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div className="row">
+                <div className="col-lg-4">
+                    <div className="donut">
+                        <h4>multiple-pie</h4>
+                        <AlphaDashChart obj={twoPie} />
+                    </div>
+                </div>
+                <div className="col-lg-4">
+                    <div className="donut">
+                        <h4>radialpie </h4>
+                        {/* <AlphaDashChart obj={optradialPie} /> */}
+                    </div>
+                </div>
+                <div className="col-lg-4">
+                    <div className="donut">
+                        <h4>antv-radialbar</h4>
+                        {/* <AlphaDashChart obj={chartradialopt} /> */}
                     </div>
                 </div>
             </div>

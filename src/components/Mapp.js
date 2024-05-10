@@ -203,7 +203,7 @@ function Mapp() {
             </div>
 
 
-            <div className="row">
+            {/* <div className="row">
                 <div className="col-lg-4">
                   <div className="donut">
                         <h4>nagaland</h4>
@@ -223,7 +223,7 @@ function Mapp() {
                         <AlphaDashChart obj={punjab} />
                     </div>
                 </div>
-            </div>
+            </div> */}
         </>
     )
 }

@@ -330,6 +330,7 @@ function TestComp() {
     }
 
     let horbar = {
+        themeId: 4,
         charttype: 'horizontalBar',
         chartId: '5',
         height: '80%',
@@ -339,6 +340,7 @@ function TestComp() {
     }
 
     let donut = {
+        themeId: 4,
         charttype: 'donut',
         height: '80%',
         width: '100%',
