@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <TestComp />
-      <ExtraCharts />
+      {/* <ExtraCharts /> */}
       {/* <AntVcharts /> */}
       {/* <Mapp /> */}
       {/* <Statistic /> */}

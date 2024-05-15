@@ -46,6 +46,7 @@ function TestComp() {
 
 
     let optiondata = {
+        themeId: 1,
         charttype: 'pie',
         height: '80%',
         width: '100%',
@@ -55,6 +56,7 @@ function TestComp() {
     }
 
     let optionline = {
+        themeId: 1,
         charttype: 'line',
         height: '80%',
         width: '100%',
@@ -65,6 +67,7 @@ function TestComp() {
 
 
     let optionarea = {
+        themeId: 1,
         charttype: 'area',
         height: '80%',
         width: '100%',
@@ -74,6 +77,7 @@ function TestComp() {
     }
 
     let bararea = {
+        themeId: 1,
         charttype: 'arealine',
         height: '500%',
         width: '100%',
@@ -83,6 +87,7 @@ function TestComp() {
     }
 
     let optionbar = {
+        themeId: 1,
         charttype: 'bar',
         height: '400%',
         width: '100%',
@@ -101,9 +106,10 @@ function TestComp() {
     }
 
     let optionbarpolar = {
+        themeId: 1,
         charttype: 'polarbar',
         chartId: '13',
-        height: '100%',
+        height: '80%',
         width: '100%',
         radiusdata: radlst,
         seriesdata: srslst,
@@ -112,6 +118,7 @@ function TestComp() {
     }
 
     let optionbarcomp = {
+        themeId: 1,
         charttype: 'comparebar',
         height: '80%',
         width: '100%',
@@ -129,6 +136,7 @@ function TestComp() {
     // console.log(index)
 
     let optionpie = {
+        themeId: 1,
         chartId: 'branchwise',
         charttype: 'simplepie',
         height: '450px',
@@ -159,6 +167,7 @@ function TestComp() {
     }
 
     let optradialbar = {
+        themeId: 1,
         charttype: 'radialbar',
         height: '80%',
         width: '100%',
@@ -175,6 +184,7 @@ function TestComp() {
     }
 
     let sun = {
+        themeId: 1,
         charttype: 'sunburst',
         height: '80%',
         width: '100%',
@@ -182,6 +192,7 @@ function TestComp() {
     }
 
     let demo = {
+        themeId: 1,
         charttype: 'compare-bar-line',
         height: '80%',
         width: '100%',
@@ -219,6 +230,7 @@ function TestComp() {
     }
 
     let multiarea = {
+        themeId: 1,
         charttype: 'multiarea',
         height: '80%',
         width: '100%',
@@ -234,7 +246,7 @@ function TestComp() {
                 lineStyle: {
                     width: 0
                 },
-                
+
                 showSymbol: false,
                 areaStyle: {
                     opacity: 0.8,
@@ -323,6 +335,7 @@ function TestComp() {
 
 
     let map = {
+        themeId: 1,
         charttype: 'map',
         height: '80%',
         width: '100%',
@@ -330,7 +343,7 @@ function TestComp() {
     }
 
     let horbar = {
-        themeId: 4,
+        themeId: 1,
         charttype: 'horizontalBar',
         chartId: '5',
         height: '80%',
@@ -340,11 +353,10 @@ function TestComp() {
     }
 
     let donut = {
-        themeId: 4,
+        themeId: 1,
         charttype: 'donut',
         height: '80%',
         width: '100%',
-        // color: ["#fd7f6f", "#7eb0d5", "#b2e061", "#bd7ebe", "#ffb55a", "#ffee65", "#beb9db", "#fdcce5", "#8bd3c7"],
         chartId: '4',
         propdata: dataa,
         label: {
@@ -361,6 +373,7 @@ function TestComp() {
 
 
     let roundbar = {
+        themeId: 1,
         charttype: 'roundbar',
         height: '80%',
         width: '100%',
@@ -378,6 +391,7 @@ function TestComp() {
     }
 
     let barHorizontal = {
+        themeId: 1,
         charttype: 'round-horizontal-bar',
         chartId: '2',
         height: '80%',
@@ -401,6 +415,7 @@ function TestComp() {
 
 
     let animation = {
+        themeId: 1,
         charttype: 'live-bar',
         height: '500%',
         width: '100%',
@@ -409,6 +424,7 @@ function TestComp() {
 
 
     let radialdata = {
+        themeId: 1,
         charttype: 'polar-radialbar',
         height: '80%',
         width: '100%',
@@ -419,6 +435,7 @@ function TestComp() {
     }
 
     let treemap = {
+        themeId: 1,
         charttype: 'treemap',
         height: '80%',
         width: '100%',
@@ -496,6 +513,7 @@ function TestComp() {
     }
 
     let symbol = {
+        themeId: 1,
         height: '80%',
         width: '100%',
         charttype: 'SymbolBar',
@@ -548,9 +566,91 @@ function TestComp() {
         ],
 
     }
+    // console.log(document.getElementsByTagName('svg'));
+    // // initialize
+    // const
+    //     svg = document.getElementsByTagName('svg')[1],
+    //     NS = svg.getAttribute('xmlns'),
+    //     out = {};
 
-    
+    // 'clientX,clientY,svgX,svgY,targetX,targetY,targetID,addX,addY'.split(',').map(s => {
+    //     out[s] = { node: document.getElementById(s), value: '-' }
+    // });
 
+    // // events
+    // svg.addEventListener('pointermove', getCoordinates);
+    // svg.addEventListener('pointerdown', getCoordinates);
+    // svg.addEventListener('pointerdown', createCircle);
+
+
+    // // update co-ordinates
+    // function getCoordinates(event) {
+    //     console.log("CALLED");
+    //     // DOM co-ordinate
+    //     out.clientX.value = event.clientX;
+    //     out.clientY.value = event.clientY;
+
+    //     // SVG co-ordinate
+    //     const svgP = svgPoint(svg, out.clientX.value, out.clientY.value);
+    //     out.svgX.value = svgP.x;
+    //     out.svgY.value = svgP.y;
+
+    //     // target co-ordinate
+    //     const svgT = svgPoint(event.target, out.clientX.value, out.clientY.value);
+    //     out.targetX.value = svgT.x;
+    //     out.targetY.value = svgT.y;
+
+    //     updateInfo();
+
+    // };
+
+
+    // // add a circle to the target
+    // function createCircle(event) {
+
+    //     // circle clicked?
+    //     if (event.target.nodeName === 'circle') return;
+
+    //     // add circle to containing element
+    //     const
+    //         target = event.target.closest('g') || event.target.ownerSVGElement || event.target,
+    //         svgP = svgPoint(target, event.clientX, event.clientY),
+    //         cX = Math.round(svgP.x),
+    //         cY = Math.round(svgP.y),
+    //         circle = document.createElementNS(NS, 'circle');
+
+    //     circle.setAttribute('cx', cX);
+    //     circle.setAttribute('cy', cY);
+    //     circle.setAttribute('r', 30);
+
+    //     target.appendChild(circle);
+
+    //     // output information
+    //     out.targetID.value = target.id || target.nodeName;
+    //     out.addX.value = cX;
+    //     out.addY.value = cY;
+    //     updateInfo();
+
+    // }
+
+
+    // // translate page to SVG co-ordinate
+    // function svgPoint(element, x, y) {
+
+    //     var pt = svg.createSVGPoint();
+    //     pt.x = x;
+    //     pt.y = y;
+    //     return pt.matrixTransform(element.getScreenCTM().inverse());
+
+    // }
+
+
+    // // output values
+    // function updateInfo() {
+
+    //     console.log(out);
+
+    // }
 
     return (
         <>
@@ -558,33 +658,6 @@ function TestComp() {
             {/* <AlphaDashChart charttype='pie' height='400px' width='600px' propdata = {dataa} radius = {[10, 150]}/> */}
             {/* <AlphaDashChart charttype='line' height='400px' width='600px' Xaxis={lst1} Yaxis={lst2} /> */}
             {/* <AlphaDashChart charttype='area' height='400px' width='600px'  /> */}
-
-
-
-
-            {/* <AlphaDashChart obj={donut} />
-            <AlphaDashChart obj={radialdata} />
-            <AlphaDashChart obj={optionpie} />
-
-            <AlphaDashChart obj={optradialbar} />
-            <AlphaDashChart obj={symbol} />
-            <AlphaDashChart obj={barHorizontal} />
-            <AlphaDashChart obj={bararea} />
-            <AlphaDashChart obj={horbar} />
-            <AlphaDashChart obj={optionline} />
-            <AlphaDashChart obj={multiarea} />
-            <AlphaDashChart obj={demo} />
-            <AlphaDashChart obj={optionbar} />
-            <AlphaDashChart obj={optionbarcomp} />
-            <AlphaDashChart obj={roundbar} />
-            <AlphaDashChart obj={optionarea} />
-            <AlphaDashChart obj={optionbarpolar} />
-            <AlphaDashChart obj={optiondata} />
-            <AlphaDashChart obj={sun} />
-            <AlphaDashChart obj={map} />
-            <AlphaDashChart obj={animation} />
-            <AlphaDashChart obj={treemap} />
-            <AlphaDashChart obj={optradialPie} /> */}
 
 
             <div className="row">
@@ -709,6 +782,7 @@ function TestComp() {
                         <AlphaDashChart obj={optionbarpolar} />
                     </div>
                 </div>
+
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>pie</h4>
@@ -725,12 +799,14 @@ function TestComp() {
                         <AlphaDashChart obj={sun} />
                     </div>
                 </div>
+
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>map</h4>
                         <AlphaDashChart obj={map} />
                     </div>
                 </div>
+
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>live-bar</h4>

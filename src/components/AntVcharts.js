@@ -43,14 +43,11 @@ function AntVcharts() {
     }
 
     let pieantv = {
-        charttype: 'antv-pie',
+        charttype: 'apex-pie-img',
         height: 500,
         width: 500,
-        series: [
-            { product: "G", sales: 0.45 },
-            { product: "J", sales: 0.55 },
-            { product: "H", sales: 0.75 },
-        ]
+        seriesdata: [44, 60, 80, 70],
+        themeId: 1,
     }
 
     let musicantv = {
@@ -172,7 +169,7 @@ function AntVcharts() {
     let antvheatmapbar = {
         charttype: 'antv-heatmap-bar',
         height: 500,
-        width: 1000
+        width: 900
     }
 
 
@@ -182,24 +179,98 @@ function AntVcharts() {
         width: 500
     }
 
+    let antvbubble = {
+        height: 500,
+        width: 580,
+        charttype: 'antv-bubble',
+        series: 40
+    }
+
+
+    let twobarchart = {
+        height: '80%',
+        width: '100%',
+        charttype: 'twochart-compare-bar',
+        chartId: 'twochart-compare-bar',
+        dataset: [
+            ['product', '2012', '2013', '2014', '2015'],
+            ['Matcha Latte', 41.1, 30.4, 65.1, 53.3],
+            ['Milk Tea', 86.5, 92.1, 85.7, 83.1],
+            ['Cheese Cocoa', 24.1, 67.2, 79.5, 86.4],
+            ['Cocoa', 24.1, 67.2, 79.5, 86.4]
+        ],
+        series: [
+            // These series are in the first grid.
+            { type: 'bar', seriesLayoutBy: 'row' },
+            { type: 'bar', seriesLayoutBy: 'row' },
+            { type: 'bar', seriesLayoutBy: 'row' },
+            // These series are in the second grid.
+            { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },
+            { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },
+            { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },
+            { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },
+        ]
+    }
+
+
+    let antvcylinder = {
+        height: 500,
+        width: 500,
+        charttype: 'antv-cylinder',
+        series: [
+            { type: '1-3 seconds', value: 0.16 },
+            { type: '4-10 seconds', value: 0.125 },
+            { type: '11-30 seconds', value: 0.24 },
+            { type: '31-60 seconds', value: 0.19 },
+            { type: '1-3 minutes', value: 0.22 },
+            { type: '3-10 minutes', value: 0.05 },
+            { type: '10-30 minutes', value: 0.01 },
+            { type: '30+minutes', value: 0.015 },
+        ]
+    }
+
+    let antvscatter = {
+        height: 500,
+        width: 500,
+        charttype: 'antv-scatter',
+    }
+
+    let antvsinglebar = {
+        height: 500,
+        width: 500,
+        charttype: 'antv-singlebar',
+        series: [
+            {
+                title: 'Product',
+                ranges: 100,
+                measures: 80,
+                targets: 85,
+            },
+        ]
+    }
+
+    let antvmultibarsingle = {
+        height: 450,
+        width: 500,
+        charttype: 'antv-singlebar-multivalue'
+    }
 
     return (
         <>
-
             <div className="row">
                 <div className="col-lg-4">
                     <div className="donut">
-                        <h4>comp_bar</h4>
+                        <h4>antv-bubble</h4>
                         <div className='antv' >
-                            <AlphaDashChart obj={chartopt} />
+                            <AlphaDashChart obj={antvbubble} />
                         </div>
                     </div>
                 </div>
                 <div className="col-lg-4">
                     <div className="donut">
-                        <h4>antv-pie</h4>
+                        <h4>antv-cylinder</h4>
                         <div className='antv' >
-                            <AlphaDashChart obj={pieantv} />
+                            <AlphaDashChart obj={antvcylinder} />
                         </div>
                     </div>
                 </div>
@@ -244,8 +315,42 @@ function AntVcharts() {
                         {/* </div> */}
                     </div>
                 </div>
+                <div className="col-lg-4">
+                    <div className="donut">
+                        <h4>antv-scatter</h4>
+                        <AlphaDashChart obj={antvscatter} />
+                        {/* </div> */}
+                    </div>
+                </div>
+                <div className="col-lg-4">
+                    <div className="donut">
+                        <h4>antv-singlebar</h4>
+                        <AlphaDashChart obj={antvsinglebar} />
+                    </div>
+                </div>
             </div>
 
+
+            <div className="row">
+                <div className="col-lg-4">
+                    <div className="donut">
+                        <h4>antv-singlebar-multivalue</h4>
+                        <AlphaDashChart obj={antvmultibarsingle} />
+                    </div>
+                </div>
+                <div className="col-lg-4">
+                    <div className="donut">
+                        <h4>antv-scatter</h4>
+                        <AlphaDashChart obj={twobarchart} />
+                    </div>
+                </div>
+                <div className="col-lg-4">
+                    <div className="donut">
+                        <h4>antv-singlebar</h4>
+                        {/* <AlphaDashChart obj={antvsinglebar} /> */}
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

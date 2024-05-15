@@ -1,10 +1,15 @@
 import { AlphaDashChart } from 'alpha-echart-library/dist/cjs'
 import React from 'react'
+import img1 from './assets/pie1.jpg'
+import img2 from './assets/pie2.jpg'
+import img3 from './assets/pie3.png'
+import img4 from './assets/pie4.jpg'
+
 
 function ExtraCharts() {
 
-
     let funnel = {
+        themeId:1,
         chartId: 'funnel',
         charttype: 'funnel',
         height: '400%',
@@ -57,6 +62,7 @@ function ExtraCharts() {
 
 
     let optionpie = {
+        themeId: 1,
         chartId: 'aaa',
         charttype: 'multi-line',
         height: '80%',
@@ -98,6 +104,7 @@ function ExtraCharts() {
     }
 
     let optionmultiarealine = {
+        themeId:1,
         chartId: 'multi-area-line',
         charttype: 'multi-area-line',
         height: '80%',
@@ -162,6 +169,7 @@ function ExtraCharts() {
         ]
     }
     let option_twoline_minmax = {
+        themeId: 1,
         chartId: 'min-max-Two-line',
         charttype: 'min-max-Two-line',
         height: '80%',
@@ -222,6 +230,7 @@ function ExtraCharts() {
         charttype: 'Two-line'
     }
     let option_pulserate = {
+        themeId:1,
         height: '80%',
         width: '100%',
         chartId: '45',
@@ -229,6 +238,7 @@ function ExtraCharts() {
     }
 
     let option_updown_area = {
+        themeId:1,
         height: '80%',
         width: '100%',
         chartId: '48',
@@ -316,6 +326,7 @@ function ExtraCharts() {
     }
 
     let largearea = {
+        themeId:1,
         height: '80%',
         width: '100%',
         chartId: 'avx',
@@ -323,6 +334,7 @@ function ExtraCharts() {
         series: data11
     }
     let dashline = {
+        themeId:0,
         height: '80%',
         width: '100%',
         chartId: 'fdg',
@@ -445,6 +457,7 @@ function ExtraCharts() {
 
 
     let line_pie = {
+        themeId:1,
         height: '80%',
         width: '100%',
         chartId: 'pie-line',
@@ -456,6 +469,7 @@ function ExtraCharts() {
 
 
     let waterfall = {
+        themeId:1,
         height: '80%',
         width: '100%',
         chartId: 'waterfall',
@@ -496,6 +510,7 @@ function ExtraCharts() {
 
 
     let polar = {
+        themeId:1,
         height: '80%',
         width: '100%',
         chartId: 'qqq',
@@ -505,6 +520,7 @@ function ExtraCharts() {
     }
 
     let cartesian = {
+        themeId:1,
         height: '400%',
         width: '100%',
         chartId: 'cartesian',
@@ -513,6 +529,7 @@ function ExtraCharts() {
         Yaxis: [2, 1.2, 2.4, 3.6, 5.1, 1.6, 7.2, 4.5],
     }
     let Halfpolar = {
+        themeId:1,
         height: '80%',
         width: '100%',
         chartId: 'qqq',
@@ -553,6 +570,7 @@ function ExtraCharts() {
 
 
     let gradientbar = {
+        themeId:3,
         height: '500%',
         width: '100%',
         labelcolor: '#fff',
@@ -563,6 +581,7 @@ function ExtraCharts() {
     }
 
     let ml_bar = {
+        themeId:1,
         height: '400%',
         width: '100%',
         chartId: 'ml-bar',
@@ -659,6 +678,7 @@ function ExtraCharts() {
     }
 
     let stackedarea = {
+        themeId:1,
         dataset: [
             [100, 302, 301, 334, 390, 330, 320],
             [320, 132, 101, 134, 90, 230, 210],
@@ -743,6 +763,7 @@ function ExtraCharts() {
     }
 
     let fourbar = {
+        themeId:1,
         height: '400%',
         width: '100%',
         chartId: 'fourchart',
@@ -801,6 +822,7 @@ function ExtraCharts() {
     }
 
     let guage = {
+        themeId:1,
         height: '80%',
         width: '100%',
         chartId: 'guage',
@@ -876,6 +898,7 @@ function ExtraCharts() {
         [1500, 1800, 1650]
     ]
     let polaravg = {
+        themeId: 1,
         height: '400%',
         width: '100%',
         chartId: 'ccc',
@@ -932,6 +955,7 @@ function ExtraCharts() {
     }
 
     let polarstackedavg = {
+        themeId: 1,
         height: '80%',
         width: '100%',
         chartId: 'bbb',
@@ -975,6 +999,7 @@ function ExtraCharts() {
 
 
     let radOpt = {
+        themeId: 1,
         height: '500%',
         width: '100%',
         chartId: 'extra',
@@ -1018,6 +1043,7 @@ function ExtraCharts() {
 
 
     let avataropt = {
+        themeId:1,
         chartId: 'avatar',
         charttype: 'avatar-bar',
         height: '400%',
@@ -1029,6 +1055,7 @@ function ExtraCharts() {
 
     
     let image_avt = {
+        themeId:1,
         chartId: 'avatar-img',
         charttype: 'avatar-img-bar',
         height: '400%',
@@ -1040,6 +1067,7 @@ function ExtraCharts() {
 
 
     let image_pie = {
+        themeId:1,
         chartId: 'img-pie',
         charttype: 'img-pie',
         height: '80%',
@@ -1071,6 +1099,7 @@ function ExtraCharts() {
 
 
     let pick_bar = {
+        themeId:1,
         chartId: 'pick-bar',
         charttype: 'pick-bar-img',
         height: '500%',
@@ -1111,6 +1140,7 @@ function ExtraCharts() {
     const pieRadius = 30;
 
     let calenderopt = {
+
         series: [{
             type: 'pie',
             id: 'pie-0',
@@ -1560,12 +1590,14 @@ function ExtraCharts() {
             ]
         }
         ],
+        themeId:1,
         chartId: 'calender',
         charttype: 'calender-pie',
         height: '400%',
         width: '100%',
     }
     let opt_pie = {
+        themeId:1,
         charttype: 'customized-pie',
         height: '80%',
         width: '100%',
@@ -1585,6 +1617,7 @@ function ExtraCharts() {
 
 
     let Xaxis_line = {
+        themeId: 1,
         height: '80%',
         width: '100%',
         chartId: 'two-xaxis-line',
@@ -1598,7 +1631,10 @@ function ExtraCharts() {
 
 
 
+
+
     let compbaropt = {
+        themeId:1,
         height: '400%',
         width: '100%',
         chartId: 'bar-comparison-chart',
@@ -1607,6 +1643,7 @@ function ExtraCharts() {
 
 
     let three_yaxis = {
+         themeId: 1,
         height: '80%',
         width: '100%',
         chartId: 'three-yaxis',
@@ -1620,6 +1657,7 @@ function ExtraCharts() {
 
 
     let stackes_bar_polar = {
+         themeId:1,
         height: '80%',
         width: '100%',
         chartId: 'stackes-bar-polar',
@@ -1634,6 +1672,7 @@ function ExtraCharts() {
 
 
     let radar = {
+        themeId:1,
         height: '80%',
         width: '100%',
         chartId: 'radar',
@@ -1659,7 +1698,8 @@ function ExtraCharts() {
 
 
     let heatmap = {
-        height: '500%',
+        themeId: 3,
+        height: '450%',
         width: '100%',
         charttype: 'heatmap',
         chartId: 'heatmap',
@@ -1672,6 +1712,7 @@ function ExtraCharts() {
     
     
     let heatmap_year = {
+        themeId : 3,
         height: '400%',
         width: '100%',
         charttype: 'heatmap-yearwise',
@@ -1697,6 +1738,7 @@ function ExtraCharts() {
     ]
     
     let optradialPie = {
+        themeId:1,
         charttype: 'radialpie',
         height: '80%',
         width: '100%',
@@ -1707,6 +1749,7 @@ function ExtraCharts() {
     
 
     let chartradialopt = {
+        themeId:1,
         charttype: 'antv-radialbar',
         series: [
             { name: 'X6', star: 297 },
@@ -1722,6 +1765,7 @@ function ExtraCharts() {
 
 
     let twoPie = {
+        themeId:1,
         charttype: 'multiple-pie',
         propdata1: [
             { value: 751, name: 'Search Engine' },
@@ -1747,6 +1791,51 @@ function ExtraCharts() {
         height: '80%',
         width: '100%',
         chartId: 'two-pie'
+    }
+
+
+    let optapexPie = {
+        themeId: 1,
+        height: '80%',
+        width: '100%',
+        chartId: 'apex-pie-img',
+        charttype: 'apex-pie-img',
+        seriesdata: [44, 54, 60, 65],
+        imglst: [img1, img2, img3,img4]
+    }
+
+
+    let antvmultibar = {
+        // themeId: 3,
+        height: 500,
+        width: 580,
+        charttype: 'antv-multibar-target',
+        series: [
+            {
+                title: '5',
+                ranges: [100, 80],
+                measures: [50, 40],
+                targets: [85],
+            },
+            {
+                title: '4',
+                ranges: [100, 10],
+                measures: [12, 40],
+                targets: [40, 70],
+            },
+            {
+                title: '3',
+                ranges: [100],
+                measures: [20],
+                targets: [22],
+            },
+            {
+                title: '0-2',
+                ranges: [100],
+                measures: [30],
+                targets: [10],
+            },
+        ]
     }
 
 
@@ -2049,14 +2138,14 @@ function ExtraCharts() {
                 </div>
                 <div className="col-lg-4">
                     <div className="donut">
-                        <h4>radialpie </h4>
-                        {/* <AlphaDashChart obj={optradialPie} /> */}
+                        <h4>apex-pie-img</h4>
+                        <AlphaDashChart obj={optapexPie} />
                     </div>
                 </div>
                 <div className="col-lg-4">
                     <div className="donut">
-                        <h4>antv-radialbar</h4>
-                        {/* <AlphaDashChart obj={chartradialopt} /> */}
+                        <h4>antv-multibar-target</h4>
+                        <AlphaDashChart obj={antvmultibar} />
                     </div>
                 </div>
             </div>
