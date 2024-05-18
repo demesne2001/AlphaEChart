@@ -167,6 +167,7 @@ function AntVcharts() {
     }
 
     let antvheatmapbar = {
+        themeId: 11,
         charttype: 'antv-heatmap-bar',
         height: 500,
         width: 900

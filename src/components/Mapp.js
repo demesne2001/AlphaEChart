@@ -56,7 +56,7 @@ function Mapp() {
         charttype: 'gujarat',
         height: '80%',
         width: '100%',
-        chartId: 'goa',
+        chartId: 'gujarat',
     }
 
     let haryana = {

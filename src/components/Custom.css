@@ -1,3 +1,7 @@
+/* g path:hover{
+    fill: rgb(238, 238, 238);
+} */
+
 .donut {
     border: 1px solid rgb(230, 250, 245);
     box-shadow: 2px 2px 10px grey;

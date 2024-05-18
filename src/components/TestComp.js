@@ -1,10 +1,15 @@
 import { EchartPie } from 'alpha-echart-library/dist/cjs'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AlphaDashChart } from 'alpha-echart-library/dist/cjs'
 import './Custom.css'
 
-
 function TestComp() {
+
+
+    const [height1, setheight] = useState('80%')
+    const [width1, setwidth] = useState('100%')
+
+
     const dataa = [
         { value: 40, name: 'rose 1' },
         { value: 38, name: 'rose 2' },
@@ -28,7 +33,7 @@ function TestComp() {
         ['2019-10-18', 100]
     ]
 
-    const lst1 = ['mon', 'sdsdsd', 'wesdsdd', 'thursdsds', 'fsdsdrti', 'ssdsdat', 'susdsdnday']
+    const lst1 = ['mon', 'tues', 'wed', 'thurs', 'friday', 'saturday', 'sunday']
     const lst2 = [150, 230, 224, 218, 135, 147, 260, 224, 218, 135, 147]
 
     const radlst = ['a', 'b', 'c', 'd']
@@ -46,7 +51,7 @@ function TestComp() {
 
 
     let optiondata = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'pie',
         height: '80%',
         width: '100%',
@@ -56,7 +61,7 @@ function TestComp() {
     }
 
     let optionline = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'line',
         height: '80%',
         width: '100%',
@@ -67,7 +72,7 @@ function TestComp() {
 
 
     let optionarea = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'area',
         height: '80%',
         width: '100%',
@@ -77,7 +82,7 @@ function TestComp() {
     }
 
     let bararea = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'arealine',
         height: '500%',
         width: '100%',
@@ -87,7 +92,7 @@ function TestComp() {
     }
 
     let optionbar = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'bar',
         height: '400%',
         width: '100%',
@@ -106,7 +111,7 @@ function TestComp() {
     }
 
     let optionbarpolar = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'polarbar',
         chartId: '13',
         height: '80%',
@@ -118,7 +123,7 @@ function TestComp() {
     }
 
     let optionbarcomp = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'comparebar',
         height: '80%',
         width: '100%',
@@ -136,11 +141,11 @@ function TestComp() {
     // console.log(index)
 
     let optionpie = {
-        themeId: 1,
+        themeId: 11,
         chartId: 'branchwise',
         charttype: 'simplepie',
-        height: '450px',
-        width: '550px',
+        height: '80%',
+        width: '100%',
         propdata: dataa,
         fontsize: 20,
         label: {
@@ -167,7 +172,7 @@ function TestComp() {
     }
 
     let optradialbar = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'radialbar',
         height: '80%',
         width: '100%',
@@ -184,7 +189,7 @@ function TestComp() {
     }
 
     let sun = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'sunburst',
         height: '80%',
         width: '100%',
@@ -192,7 +197,7 @@ function TestComp() {
     }
 
     let demo = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'compare-bar-line',
         height: '80%',
         width: '100%',
@@ -230,7 +235,7 @@ function TestComp() {
     }
 
     let multiarea = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'multiarea',
         height: '80%',
         width: '100%',
@@ -331,19 +336,17 @@ function TestComp() {
         ]
     }
 
-
-
-
     let map = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'map',
         height: '80%',
         width: '100%',
-        chartId: '6',
+        chartId: 'India'
     }
 
+
     let horbar = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'horizontalBar',
         chartId: '5',
         height: '80%',
@@ -353,10 +356,10 @@ function TestComp() {
     }
 
     let donut = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'donut',
-        height: '80%',
-        width: '100%',
+        height: height1,
+        width: width1,
         chartId: '4',
         propdata: dataa,
         label: {
@@ -373,7 +376,7 @@ function TestComp() {
 
 
     let roundbar = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'roundbar',
         height: '80%',
         width: '100%',
@@ -391,7 +394,7 @@ function TestComp() {
     }
 
     let barHorizontal = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'round-horizontal-bar',
         chartId: '2',
         height: '80%',
@@ -415,16 +418,16 @@ function TestComp() {
 
 
     let animation = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'live-bar',
-        height: '500%',
+        height: '400%',
         width: '100%',
         chartId: '1',
     }
 
 
     let radialdata = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'polar-radialbar',
         height: '80%',
         width: '100%',
@@ -435,7 +438,7 @@ function TestComp() {
     }
 
     let treemap = {
-        themeId: 1,
+        themeId: 11,
         charttype: 'treemap',
         height: '80%',
         width: '100%',
@@ -501,6 +504,8 @@ function TestComp() {
         ],
         // maxdegree: 800,
     }
+
+
     const pathSymbols = {
         reindeer:
             'path://M-22.788,24.521c2.08-0.986,3.611-3.905,4.984-5.892 c-2.686,2.782-5.047,5.884-9.102,7.312c-0.992,0.005-0.25-2.016,0.34-2.362l1.852-0.41c0.564-0.218,0.785-0.842,0.902-1.347 c2.133-0.727,4.91-4.129,6.031-6.194c1.748-0.7,4.443-0.679,5.734-2.293c1.176-1.468,0.393-3.992,1.215-6.557 c0.24-0.754,0.574-1.581,1.008-2.293c-0.611,0.011-1.348-0.061-1.959-0.608c-1.391-1.245-0.785-2.086-1.297-3.313 c1.684,0.744,2.5,2.584,4.426,2.586C-8.46,3.012-8.255,2.901-8.04,2.824c6.031-1.952,15.182-0.165,19.498-3.937 c1.15-3.933-1.24-9.846-1.229-9.938c0.008-0.062-1.314-0.004-1.803-0.258c-1.119-0.771-6.531-3.75-0.17-3.33 c0.314-0.045,0.943,0.259,1.439,0.435c-0.289-1.694-0.92-0.144-3.311-1.946c0,0-1.1-0.855-1.764-1.98 c-0.836-1.09-2.01-2.825-2.992-4.031c-1.523-2.476,1.367,0.709,1.816,1.108c1.768,1.704,1.844,3.281,3.232,3.983 c0.195,0.203,1.453,0.164,0.926-0.468c-0.525-0.632-1.367-1.278-1.775-2.341c-0.293-0.703-1.311-2.326-1.566-2.711 c-0.256-0.384-0.959-1.718-1.67-2.351c-1.047-1.187-0.268-0.902,0.521-0.07c0.789,0.834,1.537,1.821,1.672,2.023 c0.135,0.203,1.584,2.521,1.725,2.387c0.102-0.259-0.035-0.428-0.158-0.852c-0.125-0.423-0.912-2.032-0.961-2.083 c-0.357-0.852-0.566-1.908-0.598-3.333c0.4-2.375,0.648-2.486,0.549-0.705c0.014,1.143,0.031,2.215,0.602,3.247 c0.807,1.496,1.764,4.064,1.836,4.474c0.561,3.176,2.904,1.749,2.281-0.126c-0.068-0.446-0.109-2.014-0.287-2.862 c-0.18-0.849-0.219-1.688-0.113-3.056c0.066-1.389,0.232-2.055,0.277-2.299c0.285-1.023,0.4-1.088,0.408,0.135 c-0.059,0.399-0.131,1.687-0.125,2.655c0.064,0.642-0.043,1.768,0.172,2.486c0.654,1.928-0.027,3.496,1,3.514 c1.805-0.424,2.428-1.218,2.428-2.346c-0.086-0.704-0.121-0.843-0.031-1.193c0.221-0.568,0.359-0.67,0.312-0.076 c-0.055,0.287,0.031,0.533,0.082,0.794c0.264,1.197,0.912,0.114,1.283-0.782c0.15-0.238,0.539-2.154,0.545-2.522 c-0.023-0.617,0.285-0.645,0.309,0.01c0.064,0.422-0.248,2.646-0.205,2.334c-0.338,1.24-1.105,3.402-3.379,4.712 c-0.389,0.12-1.186,1.286-3.328,2.178c0,0,1.729,0.321,3.156,0.246c1.102-0.19,3.707-0.027,4.654,0.269 c1.752,0.494,1.531-0.053,4.084,0.164c2.26-0.4,2.154,2.391-1.496,3.68c-2.549,1.405-3.107,1.475-2.293,2.984 c3.484,7.906,2.865,13.183,2.193,16.466c2.41,0.271,5.732-0.62,7.301,0.725c0.506,0.333,0.648,1.866-0.457,2.86 c-4.105,2.745-9.283,7.022-13.904,7.662c-0.977-0.194,0.156-2.025,0.803-2.247l1.898-0.03c0.596-0.101,0.936-0.669,1.152-1.139 c3.16-0.404,5.045-3.775,8.246-4.818c-4.035-0.718-9.588,3.981-12.162,1.051c-5.043,1.423-11.449,1.84-15.895,1.111 c-3.105,2.687-7.934,4.021-12.115,5.866c-3.271,3.511-5.188,8.086-9.967,10.414c-0.986,0.119-0.48-1.974,0.066-2.385l1.795-0.618 C-22.995,25.682-22.849,25.035-22.788,24.521z',
@@ -513,7 +518,7 @@ function TestComp() {
     }
 
     let symbol = {
-        themeId: 1,
+        themeId: 11,
         height: '80%',
         width: '100%',
         charttype: 'SymbolBar',
@@ -566,99 +571,84 @@ function TestComp() {
         ],
 
     }
-    // console.log(document.getElementsByTagName('svg'));
-    // // initialize
-    // const
-    //     svg = document.getElementsByTagName('svg')[1],
-    //     NS = svg.getAttribute('xmlns'),
-    //     out = {};
 
-    // 'clientX,clientY,svgX,svgY,targetX,targetY,targetID,addX,addY'.split(',').map(s => {
-    //     out[s] = { node: document.getElementById(s), value: '-' }
-    // });
-
-    // // events
-    // svg.addEventListener('pointermove', getCoordinates);
-    // svg.addEventListener('pointerdown', getCoordinates);
-    // svg.addEventListener('pointerdown', createCircle);
-
-
-    // // update co-ordinates
-    // function getCoordinates(event) {
-    //     console.log("CALLED");
-    //     // DOM co-ordinate
-    //     out.clientX.value = event.clientX;
-    //     out.clientY.value = event.clientY;
-
-    //     // SVG co-ordinate
-    //     const svgP = svgPoint(svg, out.clientX.value, out.clientY.value);
-    //     out.svgX.value = svgP.x;
-    //     out.svgY.value = svgP.y;
-
-    //     // target co-ordinate
-    //     const svgT = svgPoint(event.target, out.clientX.value, out.clientY.value);
-    //     out.targetX.value = svgT.x;
-    //     out.targetY.value = svgT.y;
-
-    //     updateInfo();
-
-    // };
-
-
-    // // add a circle to the target
-    // function createCircle(event) {
-
-    //     // circle clicked?
-    //     if (event.target.nodeName === 'circle') return;
-
-    //     // add circle to containing element
-    //     const
-    //         target = event.target.closest('g') || event.target.ownerSVGElement || event.target,
-    //         svgP = svgPoint(target, event.clientX, event.clientY),
-    //         cX = Math.round(svgP.x),
-    //         cY = Math.round(svgP.y),
-    //         circle = document.createElementNS(NS, 'circle');
-
-    //     circle.setAttribute('cx', cX);
-    //     circle.setAttribute('cy', cY);
-    //     circle.setAttribute('r', 30);
-
-    //     target.appendChild(circle);
-
-    //     // output information
-    //     out.targetID.value = target.id || target.nodeName;
-    //     out.addX.value = cX;
-    //     out.addY.value = cY;
-    //     updateInfo();
-
+    // function coordinate(event) {
+    //     let x = event.clientX;
+    //     let y = event.clientY;
+    //     document.getElementById("X").value = x;
+    //     document.getElementById("Y").value = y;
+    //     console.log(document.getElementById("X").value = x, 'x coords')
+    //     console.log(document.getElementById("Y").value = x, 'x coords')
     // }
 
 
-    // // translate page to SVG co-ordinate
-    // function svgPoint(element, x, y) {
 
-    //     var pt = svg.createSVGPoint();
-    //     pt.x = x;
-    //     pt.y = y;
-    //     return pt.matrixTransform(element.getScreenCTM().inverse());
+
+
+
+    // function handleOnclickImage() {
+    //     const svg = document.getElementById('india');
+
+    //     console.log('logggg', svg)
+    //     if (svg !== null) {
+    //         svg.addEventListener('click', function (event) {
+    //             const svgRect = svg.getBoundingClientRect();
+    //             const x = event.clientX - svgRect.left;
+    //             const y = event.clientY - svgRect.top;   
+
+    //             console.log(`Mouse coordinates - X: ${x}, Y: ${y}`);
+    //             console.log(`Mouse coordinates - X: ${x}, Y: ${y}`);
+    //         });
+    //     }
 
     // }
 
+    
+    
+    // function handleOnclickImage() {
+    //     var myImg = document.getElementById("india");
+    //     myImg.onmousedown = GetCoordinates;
 
-    // // output values
-    // function updateInfo() {
 
-    //     console.log(out);
+    //     function FindPosition(oElement) {
+    //         if (typeof (oElement.offsetParent) != "undefined") {
+    //             for (var posX = 0, posY = 0; oElement; oElement = oElement.offsetParent) {
+    //                 posX += oElement.offsetLeft;
+    //                 posY += oElement.offsetTop;
+    //             }
+    //             return [posX, posY];
+    //         }
+    //         else {
+    //             return [oElement.x, oElement.y];
+    //         }
+    //     }
 
+    //     function GetCoordinates(e) {
+    //         var PosX = 0;
+    //         var PosY = 0;
+    //         var ImgPos;
+    //         ImgPos = FindPosition(myImg);
+    //         if (e.pageX || e.pageY) {
+    //             PosX = e.pageX;
+    //             PosY = e.pageY;
+    //         }
+    //         else if (e.clientX || e.clientY) {
+    //             PosX = e.clientX + document.body.scrollLeft
+    //                 + document.documentElement.scrollLeft;
+    //             PosY = e.clientY + document.body.scrollTop
+    //                 + document.documentElement.scrollTop;
+    //         }
+    //         PosX = PosX - ImgPos[0];
+    //         PosY = PosY - ImgPos[1];
+    //         // document.getElementById("x").innerHTML = PosX;
+    //         // document.getElementById("y").innerHTML = PosY;
+
+    //         console.log("coords of X and Y", PosX, PosY)
+    //     }
     // }
 
     return (
         <>
-            {/* <EchartPie charttype='pie' propdata={dataa} propheight='500px' propwidth='900px' /> */}
-            {/* <AlphaDashChart charttype='pie' height='400px' width='600px' propdata = {dataa} radius = {[10, 150]}/> */}
-            {/* <AlphaDashChart charttype='line' height='400px' width='600px' Xaxis={lst1} Yaxis={lst2} /> */}
-            {/* <AlphaDashChart charttype='area' height='400px' width='600px'  /> */}
-
 
             <div className="row">
                 <div className="col-lg-4">
@@ -676,7 +666,8 @@ function TestComp() {
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>polar-radialbar</h4>
-                        <AlphaDashChart obj={radialdata} />
+                        <AlphaDashChart obj={map} />
+                       
                     </div>
                 </div>
             </div>
@@ -708,7 +699,7 @@ function TestComp() {
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>SymbolBar</h4>
-                        <AlphaDashChart obj={symbol} />
+                        {/* <AlphaDashChart obj={symbol} /> */}
                     </div>
                 </div>
                 <div className="col-lg-4">
@@ -800,12 +791,6 @@ function TestComp() {
                     </div>
                 </div>
 
-                <div className="col-lg-4">
-                    <div className="donut">
-                        <h4>map</h4>
-                        <AlphaDashChart obj={map} />
-                    </div>
-                </div>
 
                 <div className="col-lg-4">
                     <div className="donut">
@@ -815,8 +800,14 @@ function TestComp() {
                         </div>
                     </div>
                 </div>
+                
+                <div className="col-lg-4">
+                    <div className="donut">
+                        <h4>map</h4>
+                        <AlphaDashChart obj={radialdata} />
+                    </div>
+                </div>
             </div>
-
         </>
     )
 }
