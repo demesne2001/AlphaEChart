@@ -189,6 +189,7 @@ function AntVcharts() {
 
 
     let twobarchart = {
+        themeId:11,
         height: '80%',
         width: '100%',
         charttype: 'twochart-compare-bar',
@@ -311,16 +312,13 @@ function AntVcharts() {
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>antv-polar-comparebar</h4>
-                        {/* <div className='antv' > */}
                         <AlphaDashChart obj={antvpolarcompare} />
-                        {/* </div> */}
                     </div>
                 </div>
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>antv-scatter</h4>
                         <AlphaDashChart obj={antvscatter} />
-                        {/* </div> */}
                     </div>
                 </div>
                 <div className="col-lg-4">
@@ -341,16 +339,11 @@ function AntVcharts() {
                 </div>
                 <div className="col-lg-4">
                     <div className="donut">
-                        <h4>antv-scatter</h4>
+                        <h4>twochart-compare-bar</h4>
                         <AlphaDashChart obj={twobarchart} />
                     </div>
                 </div>
-                <div className="col-lg-4">
-                    <div className="donut">
-                        <h4>antv-singlebar</h4>
-                        {/* <AlphaDashChart obj={antvsinglebar} /> */}
-                    </div>
-                </div>
+                
             </div>
         </>
     )

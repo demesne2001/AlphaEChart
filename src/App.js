@@ -9,9 +9,9 @@ function App() {
   
   return (
     <>
-      {/* <TestComp /> */}
+      <TestComp />
       <ExtraCharts />
-      {/* <AntVcharts /> */}
+      <AntVcharts />
       {/* <Mapp /> */}
       {/* <Statistic /> */}
     </>
