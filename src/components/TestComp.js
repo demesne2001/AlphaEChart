@@ -1,14 +1,12 @@
-import { EchartPie } from 'alpha-echart-library/dist/cjs'
 import React, { useEffect, useState } from 'react'
-import { AlphaDashChart } from 'alpha-echart-library/dist/cjs'
+import { AlphaDashChart, DataFormat } from 'alpha-echart-library/dist/cjs'
 import './Custom.css'
+import img1 from './assets/pie1.jpg'
+import img2 from './assets/pie2.jpg'
+import img3 from './assets/pie3.png'
+import img4 from './assets/pie4.jpg'
 
 function TestComp() {
-
-
-    const [height1, setheight] = useState('80%')
-    const [width1, setwidth] = useState('100%')
-
 
     const dataa = [
         { value: 40, name: 'rose 1' },
@@ -33,11 +31,85 @@ function TestComp() {
         ['2019-10-18', 100]
     ]
 
+    let sds = [1, 3, 4, 5, 6]
     const lst1 = ['mon', 'tues', 'wed', 'thurs', 'friday', 'saturday', 'sunday']
     const lst2 = [150, 230, 224, 218, 135, 147, 260, 224, 218, 135, 147]
 
+    console.log('alpha', DataFormat({
+        resultdata: [
+            {
+                "ScheduleID": 57,
+                "ScheduleName": "KETAN SONI TRIP 9",
+                "EstimentDays": 15,
+                "ExpenseAmount": 0,
+                "SpendDays": 14,
+                "TargetWt": 0,
+                "TotalParty": 65,
+                "TotalSpenTime": 3645,
+                "VisitedParty": 49,
+                "Amount": 0,
+                "NoBill": 0,
+                "totalwt": 0
+            },
+            {
+                "ScheduleID": 61,
+                "ScheduleName": "KETANBHAI TRAINING ",
+                "EstimentDays": 3,
+                "ExpenseAmount": 0,
+                "SpendDays": 2,
+                "TargetWt": 0,
+                "TotalParty": 5,
+                "TotalSpenTime": 10,
+                "VisitedParty": 3,
+                "Amount": 0,
+                "NoBill": 0,
+                "totalwt": 0
+            },
+            {
+                "ScheduleID": 63,
+                "ScheduleName": "KETAN SONI TRIP 10",
+                "EstimentDays": 11,
+                "ExpenseAmount": 0,
+                "SpendDays": 10,
+                "TargetWt": 0,
+                "TotalParty": 64,
+                "TotalSpenTime": 3796,
+                "VisitedParty": 34,
+                "Amount": 0,
+                "NoBill": 0,
+                "totalwt": 0
+            },
+            {
+                "ScheduleID": 68,
+                "ScheduleName": "AVANI",
+                "EstimentDays": 7,
+                "ExpenseAmount": 0,
+                "SpendDays": 6,
+                "TargetWt": 0,
+                "TotalParty": 12,
+                "TotalSpenTime": 3,
+                "VisitedParty": 1,
+                "Amount": 0,
+                "NoBill": 0,
+                "totalwt": 0
+            }
+        ],
+        XLabel: 'ScheduleName',
+        YLabelName: 'EstimentDays',
+        TypeName: 'cartesian-point',
+        XLabelID: 'ScheduleID',
+        SrNo: 0,
+        ContextObj: undefined
+    }))
+
+
+    // let rrr = DataFormat({ 'TypeName': 'bar', 'YLabelName': 'TotalSpenTime,TotalParty' })
+    // console.log('rrrr',rrr)
+
+
     const radlst = ['a', 'b', 'c', 'd']
     const srslst = [2, 1.2, 2.4, 3.6]
+
 
     const dataset = [
         ['product', '2015', '2016', '2017'],
@@ -46,9 +118,6 @@ function TestComp() {
         ['Cheese Cocoa', 86.4, 65.2, 82.5],
         ['Walnut Brownie', 72.4, 53.9, 39.1]
     ]
-
-
-
 
     let optiondata = {
         themeId: 11,
@@ -69,7 +138,6 @@ function TestComp() {
         Xaxis: lst1,
         Yaxis: lst2,
     }
-
 
     let optionarea = {
         themeId: 11,
@@ -98,16 +166,15 @@ function TestComp() {
         width: '100%',
         chartId: '14',
         Xaxis: lst1,
-        // color: ['red','black', '#444', '#fdd334','#778', '#123', '#076'],
-        // Yaxis: lst2,
-        series: [
-            {
-                type: 'bar',
-                colorBy: 'item',
-                barWidth: '60%',
-                data: lst2
-            },
-        ]
+        Yaxis: lst2
+        // series: [
+        //     {
+        //         type: 'bar',
+        //         colorBy: 'item',
+        //         barWidth: '60%',
+        //         data: lst2
+        //     },
+        // ]
     }
 
     let optionbarpolar = {
@@ -160,7 +227,7 @@ function TestComp() {
         }
         // index: AlphaDashChart.index,
     }
-
+ 
     // console.log(AlphaDashChart)
 
     let optionpie11 = {
@@ -178,14 +245,6 @@ function TestComp() {
         width: '100%',
         chartId: '11',
         propdata: dataa,
-        position: 'center',
-        fontsize: 20,
-        label: {
-            position: 'inside',
-            formatter: '{d}%',
-            color: 'white',
-            fontWeight: 'bold',
-        },
     }
 
     let sun = {
@@ -341,7 +400,17 @@ function TestComp() {
         charttype: 'map',
         height: '80%',
         width: '100%',
-        chartId: 'India'
+        chartId: 'India',
+        propdata: [{ name: 'Assam', value: 500 },
+        { name: 'Gujarat', value: 150 },
+        { name: 'West-Bengal', value: 700 },
+        { name: 'Uttrakhand', value: 654 },
+        { name: 'Goa', value: 358 },
+        { name: 'Tamilnadu', value: 574 },
+        { name: 'Tripura', value: 231 },
+        { name: 'Punjab', value: 200 },
+        { name: 'Arunachal-Pradesh', value: 300 },
+        ]
     }
 
 
@@ -351,15 +420,15 @@ function TestComp() {
         chartId: '5',
         height: '80%',
         width: '100%',
-        Xaxis: lst2,
-        Yaxis: lst1,
+        Xaxis: lst1,
+        Yaxis: lst2,
     }
 
     let donut = {
         themeId: 11,
         charttype: 'donut',
-        height: height1,
-        width: width1,
+        height: '80%',
+        width: '100%',
         chartId: '4',
         propdata: dataa,
         label: {
@@ -367,7 +436,6 @@ function TestComp() {
             position: 'outside',
             fontStyle: 'bold',
             fontsize: 100
-
         },
         labelLine: {
             show: true
@@ -382,15 +450,7 @@ function TestComp() {
         width: '100%',
         chartId: '3',
         Xaxis: lst1,
-        seriesdata: [
-            {
-                data: [120, 200, 150, 80, 70, 110, 130],
-                colorBy: 'data',
-                type: 'bar',
-                stack: 'a',
-
-            }
-        ]
+        Yaxis: [120, 200, 150, 80, 70, 110, 130]
     }
 
     let barHorizontal = {
@@ -400,22 +460,8 @@ function TestComp() {
         height: '80%',
         width: '100%',
         Xaxis: lst1,
-        seriesdata: [
-            {
-                type: 'bar',
-                colorBy: 'data',
-                stack: 'total',
-                label: {
-                    show: false
-                },
-                emphasis: {
-                    focus: 'series'
-                },
-                data: [320, 302, 301, 334, 390, 330, 320]
-            }
-        ]
+        Yaxis: [320, 302, 301, 334, 390, 330, 320]
     }
-
 
     let animation = {
         themeId: 11,
@@ -424,7 +470,6 @@ function TestComp() {
         width: '100%',
         chartId: '1',
     }
-
 
     let radialdata = {
         themeId: 11,
@@ -442,7 +487,7 @@ function TestComp() {
         charttype: 'treemap',
         height: '80%',
         width: '100%',
-        // chartId: 'polarbar',
+        chartId: 'treemap',
         // radiusAxis: lst1,
         seriesdata: [
             {
@@ -519,8 +564,6 @@ function TestComp() {
 
 
 
-
-
     let symbol = {
         themeId: 11,
         height: '80%',
@@ -574,7 +617,6 @@ function TestComp() {
                 symbol: pathSymbols.car
             }
         ],
-
     }
 
     // function coordinate(event) {
@@ -608,8 +650,8 @@ function TestComp() {
 
     // }
 
-    
-    
+
+
     // function handleOnclickImage() {
     //     var myImg = document.getElementById("india");
     //     myImg.onmousedown = GetCoordinates;
@@ -652,6 +694,142 @@ function TestComp() {
     //     }
     // }
 
+    // let statedata = { resultdata: [1,2,3,4], XLabel: 'ScheduleDays', YLabelName: 'TotalSpenTime ', TypeName: 'area ', XLabelID: 'ScheduleID ', SrNo: '0', ContextObj: '0' }
+
+    // let barfunc = DataFormat({
+    //     resultdata: [
+    //         {
+    //             "ScheduleID": 57,
+    //             "ScheduleName": "KETAN SONI TRIP 9",
+    //             "EstimentDays": 15,
+    //             "ExpenseAmount": 0,
+    //             "SpendDays": 14,
+    //             "TargetWt": 0,
+    //             "TotalParty": 65,
+    //             "TotalSpenTime": 3645,
+    //             "VisitedParty": 49,
+    //             "Amount": 0,
+    //             "NoBill": 0,
+    //             "totalwt": 0
+    //         },
+    //         {
+    //             "ScheduleID": 61,
+    //             "ScheduleName": "KETANBHAI TRAINING ",
+    //             "EstimentDays": 3,
+    //             "ExpenseAmount": 0,
+    //             "SpendDays": 2,
+    //             "TargetWt": 0,
+    //             "TotalParty": 5,
+    //             "TotalSpenTime": 10,
+    //             "VisitedParty": 3,
+    //             "Amount": 0,
+    //             "NoBill": 0,
+    //             "totalwt": 0
+    //         },
+    //         {
+    //             "ScheduleID": 63,
+    //             "ScheduleName": "KETAN SONI TRIP 10",
+    //             "EstimentDays": 11,
+    //             "ExpenseAmount": 0,
+    //             "SpendDays": 10,
+    //             "TargetWt": 0,
+    //             "TotalParty": 64,
+    //             "TotalSpenTime": 3796,
+    //             "VisitedParty": 34,
+    //             "Amount": 0,
+    //             "NoBill": 0,
+    //             "totalwt": 0
+    //         },
+    //         {
+    //             "ScheduleID": 68,
+    //             "ScheduleName": "AVANI",
+    //             "EstimentDays": 7,
+    //             "ExpenseAmount": 0,
+    //             "SpendDays": 6,
+    //             "TargetWt": 0,
+    //             "TotalParty": 12,
+    //             "TotalSpenTime": 3,
+    //             "VisitedParty": 1,
+    //             "Amount": 0,
+    //             "NoBill": 0,
+    //             "totalwt": 0
+    //         }
+    //     ],
+    //     XLabel: 'ScheduleName',
+    //     YLabelName: 'EstimentDays',
+    //     TypeName: 'map',
+    //     XLabelID: 'ScheduleID',
+    //     SrNo: 0,
+    //     ContextObj: undefined,
+    // })
+
+    // let multiy = DataFormat({
+    //     resultdata: [
+    //         {
+    //             "ScheduleID": 57,
+    //             "ScheduleName": "KETAN SONI TRIP 9",
+    //             "EstimentDays": 15,
+    //             "ExpenseAmount": 0,
+    //             "SpendDays": 14,
+    //             "TargetWt": 0,
+    //             "TotalParty": 65,
+    //             "TotalSpenTime": 3645,
+    //             "VisitedParty": 49,
+    //             "Amount": 377219,
+    //             "NoBill": 8,
+    //             "totalwt": 2451.495
+    //         },
+    //         {
+    //             "ScheduleID": 61,
+    //             "ScheduleName": "KETANBHAI TRAINING ",
+    //             "EstimentDays": 3,
+    //             "ExpenseAmount": 0,
+    //             "SpendDays": 2,
+    //             "TargetWt": 0,
+    //             "TotalParty": 5,
+    //             "TotalSpenTime": 10,
+    //             "VisitedParty": 3,
+    //             "Amount": 0,
+    //             "NoBill": 0,
+    //             "totalwt": 0
+    //         },
+    //         {
+    //             "ScheduleID": 63,
+    //             "ScheduleName": "KETAN SONI TRIP 10",
+    //             "EstimentDays": 11,
+    //             "ExpenseAmount": 27128,
+    //             "SpendDays": 10,
+    //             "TargetWt": 0,
+    //             "TotalParty": 64,
+    //             "TotalSpenTime": 3796,
+    //             "VisitedParty": 34,
+    //             "Amount": 184921,
+    //             "NoBill": 8,
+    //             "totalwt": 1777.894
+    //         },
+    //         {
+    //             "ScheduleID": 68,
+    //             "ScheduleName": "AVANI",
+    //             "EstimentDays": 7,
+    //             "ExpenseAmount": 0,
+    //             "SpendDays": 6,
+    //             "TargetWt": 0,
+    //             "TotalParty": 12,
+    //             "TotalSpenTime": 3,
+    //             "VisitedParty": 1,
+    //             "Amount": 0,
+    //             "NoBill": 0,
+    //             "totalwt": 0
+    //         }
+    //     ],
+    //     XLabel: 'ScheduleName',
+    //     YLabelName: 'EstimentDays,ExpenseAmount,TargetWt',
+    //     TypeName: 'comparebar',
+    //     XLabelID: 'ScheduleID',
+    //     SrNo: 0,
+    //     ContextObj: undefined
+    // })
+
     return (
         <>
 
@@ -665,6 +843,7 @@ function TestComp() {
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>treemap</h4>
+                        {/* <AlphaDashChart obj={barfunc} /> */}
                         <AlphaDashChart obj={treemap} />
                     </div>
                 </div>
@@ -748,12 +927,14 @@ function TestComp() {
                     <div className="donut">
                         <h4>bar</h4>
                         <AlphaDashChart obj={optionbar} />
+                        {/* <AlphaDashChart obj={barfunc} /> */}
                     </div>
                 </div>
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>comparebar</h4>
                         <AlphaDashChart obj={optionbarcomp} />
+                        {/* <AlphaDashChart obj={multiy} /> */}
                     </div>
                 </div>
                 <div className="col-lg-4">

@@ -339,25 +339,7 @@ function ExtraCharts() {
         chartId: 'fdg',
         charttype: 'dash-line',
         Xaxis: ['mon', 'tue', 'wed', 'thurs', 'friday', 'satt ', 'sun'],
-        series: [
-            {
-                name: 'demo',
-                data: [120, 200, 150, 80, 70, 110, 130],
-                type: 'line',
-                symbol: 'triangle',
-                symbolSize: 20,
-                lineStyle: {
-                    color: '#5470C6',
-                    width: 4,
-                    type: 'dashed'
-                },
-                itemStyle: {
-                    borderWidth: 3,
-                    borderColor: '#EE6666',
-                    color: 'yellow'
-                }
-            }
-        ]
+        Yaxis: [120, 200, 150, 80, 70, 110, 130]
     }
 
     let Xaxis_pointer = {
@@ -889,6 +871,7 @@ function ExtraCharts() {
         [1500, 2000, 1775],
         [1500, 1800, 1650]
     ]
+
     let polaravg = {
         themeId: 11,
         height: '400%',
@@ -1052,9 +1035,9 @@ function ExtraCharts() {
         charttype: 'avatar-img-bar',
         height: '400%',
         width: '100%',
-        maxval: 100,
-        Xaxis: [80, 60, 70, 90, 50],
-        Yaxis: ['mon', 'tue', 'wed', 'thurs', 'fri']
+        // maxval: 100,
+        Yaxis: [80, 60, 70, 90, 50],
+        Xaxis: ['mon', 'tue', 'wed', 'thurs', 'fri']
     }
 
 
@@ -1620,9 +1603,6 @@ function ExtraCharts() {
         Yaxis1: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
         Yaxis2: [3.9, 5.9, 11.1, 18.7, 48.3, 69.2, 231.6, 46.6, 55.4, 18.4, 10.3, 0.7]
     }
-
-
-
 
 
 
