@@ -18,21 +18,21 @@ function AntVcharts() {
     }
     const [getdata, setgetdata] = useState([])
 
-    useEffect(() => {
-        Graph()
-    }, [])
+    // useEffect(() => {
+    //     Graph()
+    // }, [])
 
-    const Graph = () => {
-        axios.post("http://192.168.1.208:2024/StockToSales/GetStockToSales", chartdata, {
-            headers: {
-                'authorization': `Bearer ${localStorage.getItem('token')}`,
-            }
-        })
-            .then((response) => {
-                setgetdata(response.data.lstResult)
-            })
-            .catch(error => console.error(error))
-    }
+    // const Graph = () => {
+    //     axios.post("http://192.168.1.208:2024/StockToSales/GetStockToSales", chartdata, {
+    //         headers: {
+    //             'authorization': `Bearer ${localStorage.getItem('token')}`,
+    //         }
+    //     })
+    //         .then((response) => {
+    //             setgetdata(response.data.lstResult)
+    //         })
+    //         .catch(error => console.error(error))
+    // }
 
 
     let chartopt = {
@@ -201,19 +201,23 @@ function AntVcharts() {
             ['Cheese Cocoa', 24.1, 67.2, 79.5, 86.4],
             ['Cocoa', 24.1, 67.2, 79.5, 86.4]
         ],
-        series: [
-            // These series are in the first grid.
-            { type: 'bar', seriesLayoutBy: 'row' },
-            { type: 'bar', seriesLayoutBy: 'row' },
-            { type: 'bar', seriesLayoutBy: 'row' },
-            // These series are in the second grid.
-            { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },
-            { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },
-            { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },
-            { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },
-        ]
     }
 
+
+    let cylinderchart = {
+        themeId:11,
+        height: '80%',
+        width: '100%',
+        charttype: 'cylinder',
+        chartId: 'cylinder',
+        Yaxis: [41, 72, 64, 55, 58, 55, 54, 33],
+        Xaxis: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'],
+        divname: 'col-sm-4',
+        idlst: [41, 72, 64, 55, 58, 55, 54, 33],
+        idkey: 'strbranch'
+
+    }
+    
 
     let antvcylinder = {
         height: 500,
@@ -251,11 +255,59 @@ function AntVcharts() {
         ]
     }
 
+    let stateb = {
+        'strbranch': '',
+        'target': ''
+    }
+
     let antvmultibarsingle = {
         height: 450,
         width: 500,
-        charttype: 'antv-singlebar-multivalue'
+        charttype: 'antv-singlebar-multivalue',
+        series: [
+            {
+                Team: 'monday',    
+                TargetParty: 40,
+                VistedParty: 50,
+                Prc: 10
+            },
+            {
+                Team: 'tuesday',   
+                TargetParty: 40,
+                VistedParty: 30,
+                Prc: 87
+            },
+            {
+                Team: 'wednesday', 
+                TargetParty: 70,
+                VistedParty: 50,
+                Prc: 57
+            },
+            {
+                Team: 'thursday',
+                TargetParty: 23,
+                VistedParty: 53,
+                Prc: 10
+            },
+            {
+                Team: 'friday',    
+                TargetParty: 34,
+                VistedParty: 13,
+                Prc: 87
+            },
+            {
+                Team: 'saturday',  
+                TargetParty: 53,
+                VistedParty: 34,
+                Prc: 57
+            },
+        ],
+        idlst: [12, 43, 54, 47,39,74],
+        idkey: 'strbranch'
     }
+
+    console.log("stateb", stateb)
+
 
     return (
         <>
@@ -334,13 +386,19 @@ function AntVcharts() {
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>antv-singlebar-multivalue</h4>
-                        <AlphaDashChart obj={antvmultibarsingle} />
+                        <AlphaDashChart obj={antvmultibarsingle} state={stateb}/>
                     </div>
                 </div>
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>twochart-compare-bar</h4>
                         <AlphaDashChart obj={twobarchart} />
+                    </div>
+                </div>
+                <div className="col-lg-4">
+                    <div className="donut">
+                        <h4>cylinder</h4>
+                        <AlphaDashChart obj={cylinderchart} state={stateb}/>
                     </div>
                 </div>
                 

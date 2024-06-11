@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { AlphaDashChart, DataFormat } from 'alpha-echart-library/dist/cjs'
 import './Custom.css'
-import img1 from './assets/pie1.jpg'
-import img2 from './assets/pie2.jpg'
-import img3 from './assets/pie3.png'
-import img4 from './assets/pie4.jpg'
 
 function TestComp() {
 
@@ -120,7 +116,7 @@ function TestComp() {
     ]
 
     let optiondata = {
-        themeId: 11,
+        themeId: 4,
         charttype: 'pie',
         height: '80%',
         width: '100%',
@@ -130,7 +126,7 @@ function TestComp() {
     }
 
     let optionline = {
-        themeId: 11,
+        themeId: 4,
         charttype: 'line',
         height: '80%',
         width: '100%',
@@ -140,7 +136,7 @@ function TestComp() {
     }
 
     let optionarea = {
-        themeId: 11,
+        themeId: 4,
         charttype: 'area',
         height: '80%',
         width: '100%',
@@ -150,7 +146,7 @@ function TestComp() {
     }
 
     let bararea = {
-        themeId: 11,
+        themeId: 4,
         charttype: 'arealine',
         height: '500%',
         width: '100%',
@@ -160,7 +156,7 @@ function TestComp() {
     }
 
     let optionbar = {
-        themeId: 11,
+        themeId: 4,
         charttype: 'bar',
         height: '400%',
         width: '100%',
@@ -178,19 +174,17 @@ function TestComp() {
     }
 
     let optionbarpolar = {
-        themeId: 11,
+        themeId: 4,
         charttype: 'polarbar',
         chartId: '13',
         height: '80%',
         width: '100%',
-        radiusdata: radlst,
+        radiusAxis: radlst,
         seriesdata: srslst,
-        color: ['#5470c6'],
-        radius: [40, 180]
     }
 
     let optionbarcomp = {
-        themeId: 11,
+        themeId: 4,
         charttype: 'comparebar',
         height: '80%',
         width: '100%',
@@ -208,7 +202,7 @@ function TestComp() {
     // console.log(index)
 
     let optionpie = {
-        themeId: 11,
+        themeId: 4,
         chartId: 'branchwise',
         charttype: 'simplepie',
         height: '80%',
@@ -239,16 +233,17 @@ function TestComp() {
     }
 
     let optradialbar = {
-        themeId: 11,
-        charttype: 'radialbar',
+        themeId: 4,
+        charttype: 'semi-donut',
         height: '80%',
-        width: '100%',
+        width: '100%',  
         chartId: '11',
         propdata: dataa,
+        label: false
     }
 
     let sun = {
-        themeId: 11,
+        themeId: 4,
         charttype: 'sunburst',
         height: '80%',
         width: '100%',
@@ -256,7 +251,7 @@ function TestComp() {
     }
 
     let demo = {
-        themeId: 11,
+        themeId: 4,
         charttype: 'compare-bar-line',
         height: '80%',
         width: '100%',
@@ -294,7 +289,7 @@ function TestComp() {
     }
 
     let multiarea = {
-        themeId: 11,
+        themeId: 4,
         charttype: 'multiarea',
         height: '80%',
         width: '100%',
@@ -396,26 +391,26 @@ function TestComp() {
     }
 
     let map = {
-        themeId: 11,
+        themeId: 4,
         charttype: 'map',
         height: '80%',
         width: '100%',
         chartId: 'India',
-        propdata: [{ name: 'Assam', value: 500 },
-        { name: 'Gujarat', value: 150 },
-        { name: 'West-Bengal', value: 700 },
-        { name: 'Uttrakhand', value: 654 },
-        { name: 'Goa', value: 358 },
-        { name: 'Tamilnadu', value: 574 },
-        { name: 'Tripura', value: 231 },
-        { name: 'Punjab', value: 200 },
-        { name: 'Arunachal-Pradesh', value: 300 },
+        propdata: [{ name: 'Assam', value: 500.65165465445 },
+        { name: 'Gujarat', value: 150.651354 },
+        { name: 'West-Bengal', value: 700.514545 },
+        { name: 'Uttrakhand', value: 654.446853413514 },
+        { name: 'Goa', value: 358.54548452 },
+        { name: 'Tamilnadu', value: 574.6515454231 },
+        { name: 'Tripura', value: 231.455456323 },
+        { name: 'Punjab', value: 200.1654512 },
+        { name: 'Arunachal-Pradesh', value: 300.6546545645 },
         ]
     }
 
 
     let horbar = {
-        themeId: 11,
+        themeId: 4,
         charttype: 'horizontalBar',
         chartId: '5',
         height: '80%',
@@ -424,27 +419,25 @@ function TestComp() {
         Yaxis: lst2,
     }
 
+    let state1 = {
+        "seewe": '',
+        "dakds": '',
+        "strBranch": ''
+    }
+
     let donut = {
-        themeId: 11,
+        themeId: 4,
         charttype: 'donut',
         height: '80%',
         width: '100%',
-        chartId: '4',
+        chartId: '4',   
         propdata: dataa,
-        label: {
-            show: true,
-            position: 'outside',
-            fontStyle: 'bold',
-            fontsize: 100
-        },
-        labelLine: {
-            show: true
-        },
+        label: true
     }
 
 
     let roundbar = {
-        themeId: 11,
+        themeId: 4,
         charttype: 'roundbar',
         height: '80%',
         width: '100%',
@@ -453,18 +446,22 @@ function TestComp() {
         Yaxis: [120, 200, 150, 80, 70, 110, 130]
     }
 
+
+
     let barHorizontal = {
-        themeId: 11,
+        themeId: 4,
         charttype: 'round-horizontal-bar',
-        chartId: '2',
+        chartId: 'horizontal-bar',
         height: '80%',
         width: '100%',
         Xaxis: lst1,
-        Yaxis: [320, 302, 301, 334, 390, 330, 320]
+        Yaxis: [320, 302, 301, 334, 390, 330, 320],
+        idkey: 'strBranch',
+        idlst: [2, 1, 24, 31, 23, 31, 44],
     }
 
     let animation = {
-        themeId: 11,
+        themeId: 4,
         charttype: 'live-bar',
         height: '400%',
         width: '100%',
@@ -472,7 +469,7 @@ function TestComp() {
     }
 
     let radialdata = {
-        themeId: 11,
+        themeId: 4,
         charttype: 'polar-radialbar',
         height: '80%',
         width: '100%',
@@ -483,7 +480,7 @@ function TestComp() {
     }
 
     let treemap = {
-        themeId: 11,
+        themeId: 4,
         charttype: 'treemap',
         height: '80%',
         width: '100%',
@@ -563,9 +560,8 @@ function TestComp() {
     }
 
 
-
     let symbol = {
-        themeId: 11,
+        themeId: 4,
         height: '80%',
         width: '100%',
         charttype: 'SymbolBar',
@@ -627,9 +623,6 @@ function TestComp() {
     //     console.log(document.getElementById("X").value = x, 'x coords')
     //     console.log(document.getElementById("Y").value = x, 'x coords')
     // }
-
-
-
 
 
 
@@ -695,12 +688,20 @@ function TestComp() {
     // }
 
     // let statedata = { resultdata: [1,2,3,4], XLabel: 'ScheduleDays', YLabelName: 'TotalSpenTime ', TypeName: 'area ', XLabelID: 'ScheduleID ', SrNo: '0', ContextObj: '0' }
+    const datasetw = [
+        ['product', '2015', '2016', '2017'],
+        ['Matcha Latte', 43.3, 85.8, 93.7],
+        ['Milk Tea', 83.1, 73.4, 55.1],
+        ['Cheese Cocoa', 86.4, 65.2, 82.5],
+        ['Walnut Brownie', 72.4, 53.9, 39.1]
+    ]
 
     // let barfunc = DataFormat({
     //     resultdata: [
     //         {
     //             "ScheduleID": 57,
     //             "ScheduleName": "KETAN SONI TRIP 9",
+    //             "ScheduleName1": "KETAN",
     //             "EstimentDays": 15,
     //             "ExpenseAmount": 0,
     //             "SpendDays": 14,
@@ -715,6 +716,7 @@ function TestComp() {
     //         {
     //             "ScheduleID": 61,
     //             "ScheduleName": "KETANBHAI TRAINING ",
+    //             "ScheduleName1": "TRAINING ",
     //             "EstimentDays": 3,
     //             "ExpenseAmount": 0,
     //             "SpendDays": 2,
@@ -729,6 +731,7 @@ function TestComp() {
     //         {
     //             "ScheduleID": 63,
     //             "ScheduleName": "KETAN SONI TRIP 10",
+    //             "ScheduleName1": "KETAN SONI",
     //             "EstimentDays": 11,
     //             "ExpenseAmount": 0,
     //             "SpendDays": 10,
@@ -743,7 +746,38 @@ function TestComp() {
     //         {
     //             "ScheduleID": 68,
     //             "ScheduleName": "AVANI",
-    //             "EstimentDays": 7,
+    //             "ScheduleName1": "AVANI Soni",
+    //             "EstimentDays": 23,
+    //             "ExpenseAmount": 0,
+    //             "SpendDays": 6,
+    //             "TargetWt": 0,
+    //             "TotalParty": 12,
+    //             "TotalSpenTime": 3,
+    //             "VisitedParty": 1,
+    //             "Amount": 0,
+    //             "NoBill": 0,
+    //             "totalwt": 0
+    //         },
+    //         {
+    //             "ScheduleID": 28,
+    //             "ScheduleName": "NMAE",
+    //             "ScheduleName1": "NASME",
+    //             "EstimentDays": 34,
+    //             "ExpenseAmount": 0,
+    //             "SpendDays": 6,
+    //             "TargetWt": 0,
+    //             "TotalParty": 12,
+    //             "TotalSpenTime": 3,
+    //             "VisitedParty": 1,
+    //             "Amount": 0,
+    //             "NoBill": 0,
+    //             "totalwt": 0
+    //         },
+    //         {
+    //             "ScheduleID": 58,
+    //             "ScheduleName": "avva AAA",
+    //             "ScheduleName1": "avva AAA",
+    //             "EstimentDays": 17,
     //             "ExpenseAmount": 0,
     //             "SpendDays": 6,
     //             "TargetWt": 0,
@@ -756,12 +790,19 @@ function TestComp() {
     //         }
     //     ],
     //     XLabel: 'ScheduleName',
-    //     YLabelName: 'EstimentDays',
-    //     TypeName: 'map',
+    //     YLabelName: 'EstimentDays,TotalParty',
+    //     TypeName: 'round-horizontal-bar',
     //     XLabelID: 'ScheduleID',
     //     SrNo: 0,
     //     ContextObj: undefined,
+    //     PageNo: 1,
+    //     PageSize:2, 
+    //     divSize: 6,
+    //     ClickedIdLabel: 'ScheduleID'
     // })
+
+    // console.log("alpjua", <AlphaDashChart obj={barfunc} />)
+    // console.log("console", <AlphaDashChart obj={barHorizontal} />)
 
     // let multiy = DataFormat({
     //     resultdata: [
@@ -823,7 +864,7 @@ function TestComp() {
     //         }
     //     ],
     //     XLabel: 'ScheduleName',
-    //     YLabelName: 'EstimentDays,ExpenseAmount,TargetWt',
+    //     YLabelName: 'EstimentDays,ExpenseAmount',
     //     TypeName: 'comparebar',
     //     XLabelID: 'ScheduleID',
     //     SrNo: 0,
@@ -832,12 +873,11 @@ function TestComp() {
 
     return (
         <>
-
             <div className="row">
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>donut</h4>
-                        <AlphaDashChart obj={donut} />
+                        <AlphaDashChart obj={donut} />  
                     </div>
                 </div>
                 <div className="col-lg-4">
@@ -851,7 +891,6 @@ function TestComp() {
                     <div className="donut">
                         <h4>polar-radialbar</h4>
                         <AlphaDashChart obj={map} />
-                       
                     </div>
                 </div>
             </div>
@@ -866,7 +905,7 @@ function TestComp() {
                 </div>
                 <div className="col-lg-4">
                     <div className="donut">
-                        <h4>radialbar</h4>
+                        <h4>semi-donut</h4>
                         <AlphaDashChart obj={optradialbar} />
                     </div>
                 </div>
@@ -889,7 +928,8 @@ function TestComp() {
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>round-horizontal-bar</h4>
-                        <AlphaDashChart obj={barHorizontal} />
+                        <AlphaDashChart obj={barHorizontal}/>
+                        {/* <AlphaDashChart obj={barfunc} /> */}
                     </div>
                 </div>
                 <div className="col-lg-4">
@@ -927,14 +967,12 @@ function TestComp() {
                     <div className="donut">
                         <h4>bar</h4>
                         <AlphaDashChart obj={optionbar} />
-                        {/* <AlphaDashChart obj={barfunc} /> */}
                     </div>
                 </div>
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>comparebar</h4>
                         <AlphaDashChart obj={optionbarcomp} />
-                        {/* <AlphaDashChart obj={multiy} /> */}
                     </div>
                 </div>
                 <div className="col-lg-4">
