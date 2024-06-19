@@ -703,110 +703,110 @@ function TestComp() {
         ['Walnut Brownie', 72.4, 53.9, 39.1]
     ]
 
-    // let barfunc = DataFormat({
-    //     resultdata: [
-    //         {
-    //             "ScheduleID": 57,
-    //             "ScheduleName": "KETAN SONI TRIP 9",
-    //             "ScheduleName1": "KETAN",
-    //             "EstimentDays": 15,
-    //             "ExpenseAmount": 0,
-    //             "SpendDays": 14,
-    //             "TargetWt": 0,
-    //             "TotalParty": 65,
-    //             "TotalSpenTime": 3645,
-    //             "VisitedParty": 49,
-    //             "Amount": 0,
-    //             "NoBill": 0,
-    //             "totalwt": 0
-    //         },
-    //         {
-    //             "ScheduleID": 61,
-    //             "ScheduleName": "KETANBHAI TRAINING ",
-    //             "ScheduleName1": "TRAINING ",
-    //             "EstimentDays": 3,
-    //             "ExpenseAmount": 0,
-    //             "SpendDays": 2,
-    //             "TargetWt": 0,
-    //             "TotalParty": 5,
-    //             "TotalSpenTime": 10,
-    //             "VisitedParty": 3,
-    //             "Amount": 0,
-    //             "NoBill": 0,
-    //             "totalwt": 0
-    //         },
-    //         {
-    //             "ScheduleID": 63,
-    //             "ScheduleName": "KETAN SONI TRIP 10",
-    //             "ScheduleName1": "KETAN SONI",
-    //             "EstimentDays": 11,
-    //             "ExpenseAmount": 0,
-    //             "SpendDays": 10,
-    //             "TargetWt": 0,
-    //             "TotalParty": 64,
-    //             "TotalSpenTime": 3796,
-    //             "VisitedParty": 34,
-    //             "Amount": 0,
-    //             "NoBill": 0,
-    //             "totalwt": 0
-    //         },
-    //         {
-    //             "ScheduleID": 68,
-    //             "ScheduleName": "AVANI",
-    //             "ScheduleName1": "AVANI Soni",
-    //             "EstimentDays": 23,
-    //             "ExpenseAmount": 0,
-    //             "SpendDays": 6,
-    //             "TargetWt": 0,
-    //             "TotalParty": 12,
-    //             "TotalSpenTime": 3,
-    //             "VisitedParty": 1,
-    //             "Amount": 0,
-    //             "NoBill": 0,
-    //             "totalwt": 0
-    //         },
-    //         {
-    //             "ScheduleID": 28,
-    //             "ScheduleName": "NMAE",
-    //             "ScheduleName1": "NASME",
-    //             "EstimentDays": 34,
-    //             "ExpenseAmount": 0,
-    //             "SpendDays": 6,
-    //             "TargetWt": 0,
-    //             "TotalParty": 12,
-    //             "TotalSpenTime": 3,
-    //             "VisitedParty": 1,
-    //             "Amount": 0,
-    //             "NoBill": 0,
-    //             "totalwt": 0
-    //         },
-    //         {
-    //             "ScheduleID": 58,
-    //             "ScheduleName": "avva AAA",
-    //             "ScheduleName1": "avva AAA",
-    //             "EstimentDays": 17,
-    //             "ExpenseAmount": 0,
-    //             "SpendDays": 6,
-    //             "TargetWt": 0,
-    //             "TotalParty": 12,
-    //             "TotalSpenTime": 3,
-    //             "VisitedParty": 1,
-    //             "Amount": 0,
-    //             "NoBill": 0,
-    //             "totalwt": 0
-    //         }
-    //     ],
-    //     XLabel: 'ScheduleName',
-    //     YLabelName: 'EstimentDays,TotalParty',
-    //     TypeName: 'round-horizontal-bar',
-    //     XLabelID: 'ScheduleID',
-    //     SrNo: 0,
-    //     ContextObj: undefined,
-    //     PageNo: 1,
-    //     PageSize:2, 
-    //     divSize: 6,
-    //     ClickedIdLabel: 'ScheduleID'
-    // })
+    let barfunc = DataFormat({
+        resultdata: [
+            {
+                "ScheduleID": 57,
+                "ScheduleName": "KETAN SONI TRIP 9",
+                "ScheduleName1": "KETAN",
+                "EstimentDays": 15,
+                "ExpenseAmount": 0,
+                "SpendDays": 14,
+                "TargetWt": 0,
+                "TotalParty": 65,
+                "TotalSpenTime": 3645,
+                "VisitedParty": 49,
+                "Amount": 0,
+                "NoBill": 0,
+                "totalwt": 0
+            },
+            {
+                "ScheduleID": 61,
+                "ScheduleName": "KETANBHAI TRAINING ",
+                "ScheduleName1": "TRAINING ",
+                "EstimentDays": 3,
+                "ExpenseAmount": 0,
+                "SpendDays": 2,
+                "TargetWt": 0,
+                "TotalParty": 5,
+                "TotalSpenTime": 10,
+                "VisitedParty": 3,
+                "Amount": 0,
+                "NoBill": 0,
+                "totalwt": 0
+            },
+            {
+                "ScheduleID": 63,
+                "ScheduleName": "KETAN SONI TRIP 10",
+                "ScheduleName1": "KETAN SONI",
+                "EstimentDays": 11,
+                "ExpenseAmount": 0,
+                "SpendDays": 10,
+                "TargetWt": 0,
+                "TotalParty": 64,
+                "TotalSpenTime": 3796,
+                "VisitedParty": 34,
+                "Amount": 0,
+                "NoBill": 0,
+                "totalwt": 0
+            },
+            {
+                "ScheduleID": 68,
+                "ScheduleName": "AVANI",
+                "ScheduleName1": "AVANI Soni",
+                "EstimentDays": 23,
+                "ExpenseAmount": 0,
+                "SpendDays": 6,
+                "TargetWt": 0,
+                "TotalParty": 12,
+                "TotalSpenTime": 3,
+                "VisitedParty": 1,
+                "Amount": 0,
+                "NoBill": 0,
+                "totalwt": 0
+            },
+            {
+                "ScheduleID": 28,
+                "ScheduleName": "NMAE",
+                "ScheduleName1": "NASME",
+                "EstimentDays": 34,
+                "ExpenseAmount": 0,
+                "SpendDays": 6,
+                "TargetWt": 0,
+                "TotalParty": 12,
+                "TotalSpenTime": 3,
+                "VisitedParty": 1,
+                "Amount": 0,
+                "NoBill": 0,
+                "totalwt": 0
+            },
+            {
+                "ScheduleID": 58,
+                "ScheduleName": "avva AAA",
+                "ScheduleName1": "avva AAA",
+                "EstimentDays": 17,
+                "ExpenseAmount": 0,
+                "SpendDays": 6,
+                "TargetWt": 0,
+                "TotalParty": 12,
+                "TotalSpenTime": 3,
+                "VisitedParty": 1,
+                "Amount": 0,
+                "NoBill": 0,
+                "totalwt": 0
+            }
+        ],
+        XLabel: 'ScheduleName',
+        YLabelName: 'EstimentDays,TotalParty,SpendDays',
+        TypeName: 'three-yaxis',
+        XLabelID: 'ScheduleID',
+        SrNo: 0,
+        ContextObj: undefined,
+        PageNo: 1,
+        PageSize:2, 
+        divSize: 6,
+        ClickedIdLabel: 'ScheduleID'
+    })
 
     // console.log("alpjua", <AlphaDashChart obj={barfunc} />)
     // console.log("console", <AlphaDashChart obj={barHorizontal} />)
@@ -903,7 +903,7 @@ function TestComp() {
             </div>
 
 
-            {/* <div className="row">
+            <div className="row">
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>simplepie</h4>
@@ -922,7 +922,7 @@ function TestComp() {
                         <AlphaDashChart obj={horbar} />
                     </div>
                 </div>
-            </div> */}
+            </div>
 
 
             <div className="row">
@@ -947,7 +947,7 @@ function TestComp() {
                 </div>
             </div>
 
-            {/* <div className="row">
+            <div className="row">
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>line</h4>
@@ -1034,11 +1034,20 @@ function TestComp() {
                 
                 <div className="col-lg-4">
                     <div className="donut">
-                        <h4>map</h4>
+                        <h4>polar-radialbar</h4>
                         <AlphaDashChart obj={radialdata} />
                     </div>
                 </div>
-            </div> */}
+            </div>
+
+            <div className="row">
+                <div className="col-lg-4">
+                    <div className="donut">
+                        <h4>three-yaxis</h4>
+                        <AlphaDashChart obj={barfunc} />
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
