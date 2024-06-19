@@ -1,4 +1,4 @@
-import { AlphaDashChart } from 'alpha-echart-library/dist/cjs'
+import { AlphaDashChart, DataFormat } from 'alpha-echart-library/dist/cjs'
 import React from 'react'
 import img1 from './assets/pie1.jpg'
 import img2 from './assets/pie2.jpg'
@@ -1711,8 +1711,114 @@ function ExtraCharts() {
 
         height: '80%',
         width: '100%',
-        chartId: 'multiple-pie'
+        chartId: 'multiple-pie',
+        divSize: 'col-lg-6'
     }
+
+        let barfunc = DataFormat({
+        resultdata: [
+            {
+                "ScheduleID": 57,
+                "ScheduleName": "KETAN SONI TRIP 9",
+                "ScheduleName1": "KETAN",
+                "EstimentDays": 15,
+                "ExpenseAmount": 0,
+                "SpendDays": 14,
+                "TargetWt": 0,
+                "TotalParty": 65,
+                "TotalSpenTime": 3645,
+                "VisitedParty": 49,
+                "Amount": 0,
+                "NoBill": 0,
+                "totalwt": 0
+            },
+            {
+                "ScheduleID": 61,
+                "ScheduleName": "KETANBHAI TRAINING ",
+                "ScheduleName1": "TRAINING ",
+                "EstimentDays": 3,
+                "ExpenseAmount": 0,
+                "SpendDays": 2,
+                "TargetWt": 0,
+                "TotalParty": 5,
+                "TotalSpenTime": 10,
+                "VisitedParty": 3,
+                "Amount": 0,
+                "NoBill": 0,
+                "totalwt": 0
+            },
+            {
+                "ScheduleID": 63,
+                "ScheduleName": "KETAN SONI TRIP 10",
+                "ScheduleName1": "KETAN SONI",
+                "EstimentDays": 11,
+                "ExpenseAmount": 0,
+                "SpendDays": 10,
+                "TargetWt": 0,
+                "TotalParty": 64,
+                "TotalSpenTime": 3796,
+                "VisitedParty": 34,
+                "Amount": 0,
+                "NoBill": 0,
+                "totalwt": 0
+            },
+            {
+                "ScheduleID": 68,
+                "ScheduleName": "AVANI",
+                "ScheduleName1": "AVANI Soni",
+                "EstimentDays": 23,
+                "ExpenseAmount": 0,
+                "SpendDays": 6,
+                "TargetWt": 0,
+                "TotalParty": 12,
+                "TotalSpenTime": 3,
+                "VisitedParty": 1,
+                "Amount": 0,
+                "NoBill": 0,
+                "totalwt": 0
+            },
+            {
+                "ScheduleID": 28,
+                "ScheduleName": "NMAE",
+                "ScheduleName1": "NASME",
+                "EstimentDays": 34,
+                "ExpenseAmount": 0,
+                "SpendDays": 6,
+                "TargetWt": 0,
+                "TotalParty": 12,
+                "TotalSpenTime": 3,
+                "VisitedParty": 1,
+                "Amount": 0,
+                "NoBill": 0,
+                "totalwt": 0
+            },
+            {
+                "ScheduleID": 58,
+                "ScheduleName": "avva AAA",
+                "ScheduleName1": "avva AAA",
+                "EstimentDays": 17,
+                "ExpenseAmount": 0,
+                "SpendDays": 6,
+                "TargetWt": 0,
+                "TotalParty": 12,
+                "TotalSpenTime": 3,
+                "VisitedParty": 1,
+                "Amount": 0,
+                "NoBill": 0,
+                "totalwt": 0
+            }
+        ],
+        XLabel: 'ScheduleName',
+        YLabelName: 'EstimentDays,TotalParty,SpendDays',
+        TypeName: 'multiple-pie',
+        XLabelID: 'ScheduleID',
+        SrNo: 1,
+        ContextObj: undefined,
+        PageNo: 1,
+        PageSize:4, 
+        divSize: 6,
+        ClickedIdLabel: 'ScheduleID'
+    })
 
     let optapexPie = {
         themeId: 11,
@@ -1990,8 +2096,8 @@ function ExtraCharts() {
                 </div>
                 <div className="col-lg-4">
                     <div className="donut">
-                        <h4>three-yaxis</h4>
-                        {/* <AlphaDashChart obj={three_yaxis} /> */}
+                        <h4>antv-multibar-target</h4>
+                        <AlphaDashChart obj={antvmultibar} />
                     </div>
                 </div>
             </div>
@@ -2047,22 +2153,16 @@ function ExtraCharts() {
 
 
             <div className="row">
-                <div className="col-lg-4">
+                <div className="col-lg-6">
                     <div className="donut">
                         <h4>multiple-pie</h4>
-                        <AlphaDashChart obj={twoPie} />
+                        <AlphaDashChart obj={barfunc} />
                     </div>
                 </div>
-                <div className="col-lg-4">
+                <div className="col-lg-6">
                     <div className="donut">
                         <h4>apex-pie-img</h4>
                         <AlphaDashChart obj={optapexPie} />
-                    </div>
-                </div>
-                <div className="col-lg-4">
-                    <div className="donut">
-                        <h4>antv-multibar-target</h4>
-                        <AlphaDashChart obj={antvmultibar} />
                     </div>
                 </div>
             </div>

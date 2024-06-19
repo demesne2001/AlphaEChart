@@ -382,7 +382,7 @@ function AntVcharts() {
             </div>
 
 
-            <div className="row">
+            {/* <div className="row">
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>antv-singlebar-multivalue</h4>
@@ -402,7 +402,7 @@ function AntVcharts() {
                     </div>
                 </div>
                 
-            </div>
+            </div> */}
         </>
     )
 }
