@@ -5,14 +5,13 @@ import './Custom.css'
 function TestComp() {
 
     const dataa = [
-        { value: 40, name: 'rose 1' },
-        { value: 38, name: 'rose 2' },
-        { value: 32, name: 'rose 3' },
-        { value: 30, name: 'rose 4' },
-        { value: 28, name: 'rose 5' },
-        { value: 26, name: 'rose 6' },
-        { value: 22, name: 'rose 7' },
-        { value: 18, name: 'rose 8' }
+        { name: 'rose 1', value: 40 },
+        { name: 'rose 2', value: 38 },
+        { name: 'rose 3', value: 32 },
+        { name: 'rose 4', value: 30 },
+        { name: 'rose 5', value: 28 },
+        { name: 'rose 6', value: 26 },
+        { name: 'rose 7', value: 22 },
     ]
 
     const bardata = [
@@ -28,7 +27,7 @@ function TestComp() {
     ]
 
     let sds = [1, 3, 4, 5, 6]
-    const lst1 = ['mon', 'tues', 'wed', 'thurs', 'friday', 'saturday', 'sunday']
+    const lst1 = ['mondayy', 'tuesdayy', 'wednesdayyy', 'thurs', 'friday', 'saturday', 'sunday']
     const lst2 = [150, 230, 224, 218, 135, 147, 260, 224, 218, 135, 147]
 
     console.log('alpha', DataFormat({
@@ -422,7 +421,8 @@ function TestComp() {
     let state1 = {
         "seewe": '',
         "dakds": '',
-        "strBranch": ''
+        "strBranch": '',
+        "filtername": ''
     }
 
     let donut = {
@@ -432,7 +432,9 @@ function TestComp() {
         width: '100%',
         chartId: '4',   
         propdata: dataa,
-        label: true
+        // label: true,
+        idkey: 'strBranch',
+        idlst: [2, 1, 24, 31, 23, 31, 44],
     }
 
 
@@ -459,6 +461,11 @@ function TestComp() {
         idkey: 'strBranch',
         idlst: [2, 1, 24, 31, 23, 31, 44],
     }
+
+
+
+    console.log("aaa", state1)
+
 
     let animation = {
         themeId: 4,
@@ -877,7 +884,7 @@ function TestComp() {
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>donut</h4>
-                        <AlphaDashChart obj={donut} />  
+                        <AlphaDashChart obj={donut} state={state1} />  
                     </div>
                 </div>
                 <div className="col-lg-4">
@@ -896,7 +903,7 @@ function TestComp() {
             </div>
 
 
-            <div className="row">
+            {/* <div className="row">
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>simplepie</h4>
@@ -915,7 +922,7 @@ function TestComp() {
                         <AlphaDashChart obj={horbar} />
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
             <div className="row">
@@ -928,7 +935,7 @@ function TestComp() {
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>round-horizontal-bar</h4>
-                        <AlphaDashChart obj={barHorizontal}/>
+                        <AlphaDashChart obj={barHorizontal} state={state1}/>
                         {/* <AlphaDashChart obj={barfunc} /> */}
                     </div>
                 </div>
@@ -940,7 +947,7 @@ function TestComp() {
                 </div>
             </div>
 
-            <div className="row">
+            {/* <div className="row">
                 <div className="col-lg-4">
                     <div className="donut">
                         <h4>line</h4>
@@ -1031,7 +1038,7 @@ function TestComp() {
                         <AlphaDashChart obj={radialdata} />
                     </div>
                 </div>
-            </div>
+            </div> */}
         </>
     )
 }

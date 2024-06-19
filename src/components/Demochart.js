@@ -1,54 +1,40 @@
-import React, { useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import { Bullet } from '@ant-design/plots';
+import { AlphaDashChart } from 'alpha-echart-library/dist/cjs'
+import React from 'react'
 
 
-export const Demobullet = () => {
+export function Demobullet() {
 
-    useEffect(() => {
-        mainfunc()
-    }, [])
+  let state = {
+    'strmonth': '',
+    'strbranch': '',
+  }
 
-    function mainfunc() {
-        const data = [
-            {
-                title: '5🌟',
-                ranges: [100, 80],
-                measures: [50, 40],
-                targets: [85],
-            },
-            {
-                title: '4🌟',
-                ranges: [100, 10],
-                measures: [12, 40],
-                targets: [40, 70],
-            },
-            {
-                title: '3🌟',
-                ranges: [100],
-                measures: [20],
-                targets: [22],
-            },
-            {
-                title: '0-2🌟',
-                ranges: [100],
-                measures: [30],
-                targets: [10],
-            },
-        ];
 
-        const color = {
-            ranges: ['#FFbcb8', '#FFe0b0', '#bfeec8'],
-            measures: ['#5B8FF9', '#61DDAA'],
-            targets: ['#f0f'],
-        };
+  let bar = {
+    themeId: 11,
+    chartId: 'inside-Bar',
+    charttype: 'inside-Bar',
+    height: '400%',
+    width: 500,
+    legend: ['bafdfjhfdsr1', 'bfsdfsdfsdfsdfhgbytytgtgar2', 'bar3', 'bar44'],
+    color: ['#00246B', 'blue'],
+    widthlst: [30, 15, 7],
+    Xaxis: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    Yaxis: [[320, 302, 301, 334, 390, 330, 320], [310, 132, 101, 134, 90, 230, 210], [203, 404, 506, 405, 603, 302, 230], [203, 404, 506, 405, 603, 302, 230]],
+    idkey: 'strmonth',
+    idlst: [2, 1, 24, 31, 23],
+    alignment: 'V',
+    barnum: 3,
+    bargap: '-75%',
+    maxval: 0,
+    minval: 600
+  }
 
-        const config = {
-            data,
-            color,
-        };
 
-        return <Bullet {...config} />;
-    }
+  return (
+    <>
+      <AlphaDashChart obj={bar} state={state} />
+    </>
+  )
 }
 
